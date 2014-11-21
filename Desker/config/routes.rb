@@ -44,4 +44,8 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
+
 end
