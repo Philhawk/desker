@@ -9,14 +9,3 @@ class PagesController < ApplicationController
   end
 end
 
-# Andrew Start
-
-I love lamp 
-
-# Andrew end
-
-# Phil start
-
-testing 123
-
-# Phil end
