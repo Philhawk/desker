@@ -27,12 +27,21 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
+
 gem 'bcrypt'
+gem 'haml'
+gem "paperclip", "~> 4.2"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
+
+group :development do
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'pry-stack_explorer'
+end 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

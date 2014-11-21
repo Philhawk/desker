@@ -8,22 +8,21 @@
       <th>Price</th>
       <th>Availability</th>
       <th>Amenities</th>
-      <th>Desk type</th>
-      <th>Thumbnail</th>
-      <th colspan="3"></th>
+      <th>Desk Type</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @desks.each do |desk| %>
       <tr>
+         <td><%= image_tag desk.thumbnail.url(:medium) %></td>
         <td><%= desk.title %></td>
         <td><%= desk.description %></td>
         <td><%= desk.price %></td>
         <td><%= desk.availability %></td>
         <td><%= desk.amenities %></td>
         <td><%= desk.desk_type %></td>
-        <td><%= desk.thumbnail %></td>
         <td><%= link_to 'Show', desk, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_desk_path(desk), class: "btn btn-link" %></td>
         <td><%= link_to 'Destroy', desk, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
