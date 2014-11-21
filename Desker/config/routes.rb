@@ -28,6 +28,9 @@
 #          root GET    /                          desks#index
 #   pages_about GET    /pages/about(.:format)     pages#about
 # pages_contact GET    /pages/contact(.:format)   pages#contact
+#         login GET    /login(.:format)           session#new
+#               POST   /login(.:format)           session#create
+#               DELETE /login(.:format)           session#destroy
 #
 
 Rails.application.routes.draw do
@@ -43,5 +46,9 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/contact'
+
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
 
 end

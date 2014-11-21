@@ -3,9 +3,8 @@ class CreateDesks < ActiveRecord::Migration
     create_table :desks do |t|
       t.string :title
       t.string :description
+      t.text :address
       t.integer :price
-      t.boolean :availability
-      t.text :amenities
       t.string :desk_type
       t.text :thumbnail
 
