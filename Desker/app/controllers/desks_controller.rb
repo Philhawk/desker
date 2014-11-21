@@ -69,6 +69,6 @@ class DesksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def desk_params
-      params.require(:desk).permit(:title, :description, :price, :availability, :amenities, :desk_type, :thumbnail)
+      params.require(:desk).permit(:title, :description, :price, :address, :desk_type, :thumbnail)
     end
 end

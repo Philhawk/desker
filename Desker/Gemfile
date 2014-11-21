@@ -28,6 +28,9 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem "paperclip", "~> 4.2"
+gem 'geocoder'
+
+gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

@@ -6,10 +6,9 @@
       <th>Title</th>
       <th>Description</th>
       <th>Price</th>
-      <th>Availability</th>
-      <th>Amenities</th>
+      <th>Address</th>
       <th>Desk Type</th>
-      <th colspan="4"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -20,8 +19,7 @@
         <td><%= desk.title %></td>
         <td><%= desk.description %></td>
         <td><%= desk.price %></td>
-        <td><%= desk.availability %></td>
-        <td><%= desk.amenities %></td>
+        <td><%= desk.address %></td>
         <td><%= desk.desk_type %></td>
         <td><%= link_to 'Show', desk, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_desk_path(desk), class: "btn btn-link" %></td>

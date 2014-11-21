@@ -13,12 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20141121021603) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "desks", force: true do |t|
     t.string   "title"
     t.string   "description"
+    t.text     "address"
     t.integer  "price"
-    t.boolean  "availability"
-    t.text     "amenities"
     t.string   "desk_type"
     t.text     "thumbnail"
     t.datetime "created_at"
@@ -41,7 +43,7 @@ ActiveRecord::Schema.define(version: 20141121021603) do
 
   create_table "venues", force: true do |t|
     t.string   "name"
-    t.string   "location"
+    t.text     "features"
     t.text     "contact"
     t.integer  "no_desks"
     t.text     "description"

@@ -4,7 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  name        :string(255)
-#  location    :string(255)
+#  features    :text
 #  contact     :text
 #  no_desks    :integer
 #  description :text
