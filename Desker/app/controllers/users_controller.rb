@@ -19,6 +19,9 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    #Rusli Start
+    @users = @current_user
+    #Rusli Stop 
   end
 
   # POST /users
