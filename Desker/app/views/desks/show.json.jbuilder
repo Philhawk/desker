@@ -1,1 +1,1 @@
-json.extract! @desk, :id, :name, :description, :price, :created_at, :updated_at
+json.extract! @desk, :id, :title, :description, :price, :availability, :amenities, :desk_type, :thumbnail, :created_at, :updated_at

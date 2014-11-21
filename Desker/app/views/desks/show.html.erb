@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @desk.name %>
+  <strong>Title:</strong>
+  <%= @desk.title %>
 </p>
 
 <p>
@@ -13,6 +13,26 @@
 <p>
   <strong>Price:</strong>
   <%= @desk.price %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @desk.availability %>
+</p>
+
+<p>
+  <strong>Amenities:</strong>
+  <%= @desk.amenities %>
+</p>
+
+<p>
+  <strong>Desk type:</strong>
+  <%= @desk.desk_type %>
+</p>
+
+<p>
+  <strong>Thumbnail:</strong>
+  <%= @desk.thumbnail %>
 </p>
 
 <%= link_to 'Edit', edit_desk_path(@desk) %> |

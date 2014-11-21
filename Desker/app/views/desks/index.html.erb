@@ -3,9 +3,13 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Title</th>
       <th>Description</th>
       <th>Price</th>
+      <th>Availability</th>
+      <th>Amenities</th>
+      <th>Desk type</th>
+      <th>Thumbnail</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,9 +17,13 @@
   <tbody>
     <% @desks.each do |desk| %>
       <tr>
-        <td><%= desk.name %></td>
+        <td><%= desk.title %></td>
         <td><%= desk.description %></td>
         <td><%= desk.price %></td>
+        <td><%= desk.availability %></td>
+        <td><%= desk.amenities %></td>
+        <td><%= desk.desk_type %></td>
+        <td><%= desk.thumbnail %></td>
         <td><%= link_to 'Show', desk %></td>
         <td><%= link_to 'Edit', edit_desk_path(desk) %></td>
         <td><%= link_to 'Destroy', desk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
