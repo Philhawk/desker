@@ -14,4 +14,8 @@
 
 class Venue < ActiveRecord::Base
 	has_many :desks
+
+
+	validates :name, :presence => true
+
 end
