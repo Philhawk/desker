@@ -29,7 +29,6 @@ class UsersController < ApplicationController
   def edit
     #Rusli Start
     @users = @current_user
-    
     #Rusli Stop 
   end
 
