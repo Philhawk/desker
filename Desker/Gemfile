@@ -33,7 +33,6 @@ gem 'haml'
 gem "paperclip", "~> 4.2"
 gem 'geocoder'
 
-gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
