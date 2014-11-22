@@ -1,10 +1,13 @@
 class DesksController < ApplicationController
   before_action :set_desk, only: [:show, :edit, :update, :destroy]
 
-  # GET /desks
-  # GET /desks.json
+
   def index
+    if params[:search].present?
+      @desks = Desk.near(params[:search], 5, :order => 'distance')
+    else
     @desks = Desk.all
+    end
   end
 
   # GET /desks/1
@@ -72,3 +75,4 @@ class DesksController < ApplicationController
       params.require(:desk).permit(:title, :description, :price, :address, :desk_type, :thumbnail)
     end
 end
+
