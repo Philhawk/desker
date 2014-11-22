@@ -1,7 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/AndrewThompson/Desktop/desker/Desker/spec/models/user_spec.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/spec/models/desk_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -20,23 +26,9 @@
         null,
         null,
         1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
         null,
         1,
         1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
         null,
         null,
         1,
@@ -51,8 +43,34 @@
         null,
         null,
         null,
+        null,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
         1,
         null,
         null,
@@ -73,7 +91,7 @@
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/spec/rails_helper.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -125,14 +143,14 @@
         1,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/environment.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/application.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/application.rb": [
         1,
         null,
         null,
@@ -164,13 +182,13 @@
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/boot.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/environments/test.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/environments/test.rb": [
         1,
         null,
         null,
@@ -211,7 +229,7 @@
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/initializers/assets.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -221,7 +239,7 @@
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/initializers/backtrace_silencers.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -230,18 +248,18 @@
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/initializers/cookies_serializer.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/initializers/inflections.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -259,18 +277,18 @@
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/initializers/mime_types.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/initializers/session_store.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/initializers/wrap_parameters.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -286,7 +304,7 @@
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/config/routes.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/config/routes.rb": [
         null,
         null,
         null,
@@ -342,11 +360,10 @@
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/app/helpers/application_helper.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/app/helpers/application_helper.rb": [
         1,
         null,
         1,
-        0,
         0,
         0,
         0,
@@ -361,23 +378,30 @@
         null,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/app/helpers/desks_helper.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/app/helpers/desks_helper.rb": [
         1,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/app/helpers/pages_helper.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/app/helpers/pages_helper.rb": [
         1,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/app/helpers/users_helper.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/app/helpers/venues_helper.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/app/helpers/venues_helper.rb": [
         1,
         null
       ],
-      "/Users/AndrewThompson/Desktop/desker/Desker/app/models/user.rb": [
+      "/Users/Rusli/Desktop/desker/Desker/app/models/desk.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -393,33 +417,17 @@
         null,
         null,
         1,
-        null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
         1,
         null,
-        null,
         1,
         1,
-        null,
-        null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
         null
       ]
     },
-    "timestamp": 1416617069
+    "timestamp": 1416627447
   }
 }

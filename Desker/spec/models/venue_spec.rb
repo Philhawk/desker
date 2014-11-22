@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # # == Schema Information
 # #
 # # Table name: venues
@@ -57,7 +56,7 @@ RSpec.describe Venue, :type => :model do
 			end
 
 			# Can features be added without input?
-			it 'does not allow features to be added to the venue object without input'
+			it 'does not allow features to be added to the venue object without input' do
 				venue = Venue.new(:features => '')
 				expect(venue.features).to_not be_valid
 			end
@@ -97,3 +96,5 @@ RSpec.describe Venue, :type => :model do
 				venue = Venue.new(:description => '')
 				expect(venue.description).to_not be_valid
 			end
+		end
+end
