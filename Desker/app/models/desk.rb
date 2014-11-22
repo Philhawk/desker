@@ -6,8 +6,6 @@
 #  title                  :string(255)
 #  description            :string(255)
 #  address                :text
-#  latitude               :float
-#  longitude              :float
 #  price                  :integer
 #  desk_type              :string(255)
 #  thumbnail              :text
@@ -23,9 +21,9 @@ class Desk < ActiveRecord::Base
 	belongs_to :venue
 	has_many :users
 	geocoded_by :address
-	#after_validation :geocode
-	has_attached_file :thumbnail, :styles => { :medium => "200x>", :thumb => "100x100>" }, :default_url => "default.jpg"
-  validates_attachment_content_type :thumbnail, :content_type => /\Aimage\/.*\Z/
   validates :title, :presence => true
   validates :price, :presence => true
+	after_validation :geocode
+	has_attached_file :thumbnail, :styles => { :large => "400x>", :medium => "200x>", :thumb => "100x100>" }, :default_url => "default.jpg"
+  	validates_attachment_content_type :thumbnail, :content_type => /\Aimage\/.*\Z/
 end

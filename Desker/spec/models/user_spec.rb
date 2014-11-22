@@ -22,11 +22,12 @@ RSpec.describe User, :type => :model do
 
 		describe '.new' do
 
-			# Create a valid a user when all attributes are provided
+			# Create a valid user when all attributes are provided
 			it 'creates a valid user with the required attributes (email, password, name)' do
 				user = User.new(:name => 'horselover', :email => 'phil@phil.com', :password => 'fatties', :password_confirmation => 'fatties')
 				expect(user).to be_valid
 			end
+			
 			# Can a new user object be assigned a name?
 			it 'assigns a name to the user object' do
 				user = User.new(:name => 'Phil Jacob')
