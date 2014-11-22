@@ -14,14 +14,27 @@
 
 class User < ActiveRecord::Base
   
+	attr_accessor :name
 
-  #Rusli  Start 
+	# def initialize
+	# 	@name = Name.new
+	# end
+
+	has_many :desks
+	has_many :venues
+
+  # #Rusli  Start 
   has_secure_password
   validates :name, :presence => true
-  validates :email, :presence => true
-  #Rusli Stop 
 
-	has_many :venues
-	has_many :desks
+  # Checks that the password is between 6 and 20 characters
+  validates :password, length: { minimum: 6 }
+
+
+
+  # validates :email, :presence => true
+  # #Rusli Stop 
+
+
 
 end
