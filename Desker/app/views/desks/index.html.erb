@@ -1,5 +1,12 @@
 <h1>Listing desks</h1>
 
+<%= form_tag desks_path, :method => :get do %>
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search Near", :name => nil %>
+</p>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -13,7 +20,7 @@
   </thead>
 
   <tbody>
-    <% @desks.each do |desk| %>
+    <% for desk in @desks %>
       <tr>
          <td><%= image_tag desk.thumbnail.url(:medium) %></td>
         <td><%= desk.title %></td>
