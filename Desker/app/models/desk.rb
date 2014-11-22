@@ -24,6 +24,6 @@ class Desk < ActiveRecord::Base
 	has_many :users
 	geocoded_by :address
 	after_validation :geocode
-	has_attached_file :thumbnail, :styles => { :medium => "200x>", :thumb => "100x100>" }, :default_url => "default.jpg"
+	has_attached_file :thumbnail, :styles => { :large => "400x>", :medium => "200x>", :thumb => "100x100>" }, :default_url => "default.jpg"
   	validates_attachment_content_type :thumbnail, :content_type => /\Aimage\/.*\Z/
 end

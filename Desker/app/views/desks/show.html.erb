@@ -2,6 +2,8 @@
 
 
 <%= image_tag @desk.thumbnail.url(:medium) %>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=600x300&sensor=false&zoom=16&markers=#{@desk.latitude}%2C#{@desk.longitude}" %>
+
 
 <p>
   <strong>Title:</strong>
