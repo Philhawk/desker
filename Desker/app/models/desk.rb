@@ -15,7 +15,7 @@
 #  thumbnail_content_type :string(255)
 #  thumbnail_file_size    :integer
 #  thumbnail_updated_at   :datetime
-#   
+#    
 
 class Desk < ActiveRecord::Base
 	belongs_to :venue
