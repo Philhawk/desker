@@ -12,10 +12,9 @@
 #  updated_at      :datetime
 #
 
-<<<<<<< HEAD
-=======
+
 # Requires the Rails Helper. This is needed in order to use RSpec in a Rails project.
->>>>>>> abd0526c94b2f58c7c6fb91d04fde3b59f219912
+
 require 'rails_helper'
 
 RSpec.describe User, :type => :model do
