@@ -5,7 +5,7 @@ class CreateDesks < ActiveRecord::Migration
       t.string :description
       t.text :address
       t.float :latitude
-      t.float :longitude
+      t.float :longitude 
       t.integer :price
       t.string :desk_type
       t.text :thumbnail
