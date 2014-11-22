@@ -26,8 +26,6 @@
 #  title                  :string(255)
 #  description            :string(255)
 #  address                :text
-#  latitude               :float
-#  longitude              :float
 #  price                  :integer
 #  desk_type              :string(255)
 #  thumbnail              :text
