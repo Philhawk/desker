@@ -1,5 +1,14 @@
+<video id="bgvid" width="600" loop="loop" autoplay="" muted="" style="width:100%; margin-top:-455px">
+    <source src="https://www.dropbox.com/s/cenxw4snzwf9ylm/desker_index_video.mp4" type="video/mp4">
+    <source src="https://www.dropbox.com/s/ixbw7jxvcgf2onu/desker_index_video.webm" type="video/webm">
+          <param name="wmode" value="transparent">
+          <param name="autoplay" value="true">
+          <param name="loop" value="true">
+
+  </video>
+
 <div class="row">
-   <% for desk in @desks %>
+  <% for desk in @desks %>
     <div class="col-md-3">
       <div class="thumbnail">
         <%= image_tag desk.thumbnail.url %> 
