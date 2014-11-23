@@ -1,4 +1,3 @@
-
 # == Schema Information
 #
 # Table name: desks
@@ -7,6 +6,8 @@
 #  title                  :string(255)
 #  description            :string(255)
 #  address                :text
+#  latitude               :float
+#  longitude              :float
 #  price                  :integer
 #  desk_type              :string(255)
 #  thumbnail              :text
@@ -17,7 +18,6 @@
 #  thumbnail_file_size    :integer
 #  thumbnail_updated_at   :datetime
 #
-
 
 require 'rails_helper'
 
