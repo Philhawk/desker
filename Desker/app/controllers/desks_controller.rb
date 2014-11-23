@@ -36,6 +36,8 @@ class DesksController < ApplicationController
   # POST /desks.json
   def create
     @desk = Desk.new(desk_params)
+    @desk.user_id = @current_user.id
+
 
     respond_to do |format|
       if @desk.save

@@ -51,4 +51,4 @@ end
 
 #Rusli Stop 
 
->>>>>>> d9328e8aed2242c5c248f10ff82a0d22ade3f3c6
+
