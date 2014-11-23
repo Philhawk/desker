@@ -33,6 +33,7 @@ gem 'haml'
 gem "paperclip", "~> 4.2"
 gem 'geocoder'
 gem 'searchkick'
+gem "paperclip-dropbox", ">= 1.1.7"
 
 group :production do
   gem 'pg'

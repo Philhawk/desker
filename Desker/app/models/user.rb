@@ -27,13 +27,17 @@ class User < ActiveRecord::Base
 
   # Checks that the password is between 6 and 20 characters
   validates :password, length: { minimum: 6 }
+ 
 
-  has_attached_file :avatar, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default.jpg"
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+  has_attached_file :avatar, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default.jpg",
+                    :storage => :dropbox,
+                    :dropbox_credentials => Rails.root.join("config/dropbox.yml")
 
-  # validates :email, :presence => true
-  # #Rusli Stop 
+   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+      
+ 
 
 
 
 end
+
