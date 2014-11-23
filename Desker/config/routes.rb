@@ -39,7 +39,12 @@ Rails.application.routes.draw do
 
   resources :venues
 
-  resources :desks
+  resources :desks do
+    collection do
+      get 'search'
+    end
+  end
+
 
   root :to => "desks#index"
 

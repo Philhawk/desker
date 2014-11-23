@@ -18,6 +18,7 @@
 #    
 
 class Desk < ActiveRecord::Base
+	searchkick
 	belongs_to :venue
 	has_many :users
 	geocoded_by :address
