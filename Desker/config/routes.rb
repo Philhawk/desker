@@ -17,6 +17,7 @@
 #               PATCH  /venues/:id(.:format)      venues#update
 #               PUT    /venues/:id(.:format)      venues#update
 #               DELETE /venues/:id(.:format)      venues#destroy
+#  search_desks GET    /desks/search(.:format)    desks#search
 #         desks GET    /desks(.:format)           desks#index
 #               POST   /desks(.:format)           desks#create
 #      new_desk GET    /desks/new(.:format)       desks#new
