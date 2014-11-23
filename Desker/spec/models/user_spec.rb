@@ -6,17 +6,14 @@
 #  name            :string(255)
 #  email           :string(255)
 #  password_digest :string(255)
-#  avatar          :text
 #  role            :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
 #
 
-
 # Requires the Rails Helper. This is needed in order to use RSpec in a Rails project.
 
 require 'rails_helper'
-require 'user'
 
 RSpec.describe User, :type => :model do
 
@@ -27,7 +24,7 @@ RSpec.describe User, :type => :model do
 				user = User.new(:name => 'horselover', :email => 'phil@phil.com', :password => 'fatties', :password_confirmation => 'fatties')
 				expect(user).to be_valid
 			end
-			
+
 			# Can a new user object be assigned a name?
 			it 'assigns a name to the user object' do
 				user = User.new(:name => 'Phil Jacob')

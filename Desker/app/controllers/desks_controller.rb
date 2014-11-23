@@ -2,6 +2,14 @@ class DesksController < ApplicationController
   before_action :set_desk, only: [:show, :edit, :update, :destroy]
 
 
+  def search
+      if params[:search].present?
+        @desks = Desk.search(params[:search])
+      else
+        @desks = Desk.all
+      end
+  end
+
   def index
     if params[:search].present?
       @desks = Desk.near(params[:search], 5, :order => 'distance')

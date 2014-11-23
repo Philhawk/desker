@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-# # == Schema Information
-# #
-# # Table name: venues
-# #
-# #  id          :integer          not null, primary key
-# #  name        :string(255)
-# #  location    :string(255)
-# #  contact     :text
-# #  no_desks    :integer
-# #  description :text
-# #  created_at  :datetime
-# #  updated_at  :datetime
-# #
 
-=======
->>>>>>> d3a876c74171642c8b723fe7c8a342978984f3f3
+
 # == Schema Information
 #
 # Table name: venues

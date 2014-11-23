@@ -10,15 +10,7 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
-
-<p>
-  <strong>Avatar:</strong>
-  <%= @user.avatar %>
-</p>
+<%= image_tag @user.avatar %>
 
 <p>
   <strong>Class:</strong>
