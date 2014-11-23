@@ -6,7 +6,6 @@
 #  name            :string(255)
 #  email           :string(255)
 #  password_digest :string(255)
-#  avatar          :text
 #  role            :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
@@ -14,8 +13,7 @@
 
 class User < ActiveRecord::Base
   
-	attr_accessor :name
-
+	
 	# def initialize
 	# 	@name = Name.new
 	# end
@@ -30,7 +28,8 @@ class User < ActiveRecord::Base
   # Checks that the password is between 6 and 20 characters
   validates :password, length: { minimum: 6 }
 
-
+  has_attached_file :avatar, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default.jpg"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   # validates :email, :presence => true
   # #Rusli Stop 

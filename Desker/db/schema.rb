@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121021603) do
+ActiveRecord::Schema.define(version: 20141123013025) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20141121021603) do
     t.string   "title"
     t.string   "description"
     t.text     "address"
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "price"
     t.string   "desk_type"
     t.text     "thumbnail"
@@ -35,10 +37,13 @@ ActiveRecord::Schema.define(version: 20141121021603) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.text     "avatar"
     t.string   "role"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "venues", force: true do |t|

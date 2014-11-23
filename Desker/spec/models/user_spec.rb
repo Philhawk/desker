@@ -6,12 +6,10 @@
 #  name            :string(255)
 #  email           :string(255)
 #  password_digest :string(255)
-#  avatar          :text
 #  role            :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
 #
-
 
 # Requires the Rails Helper. This is needed in order to use RSpec in a Rails project.
 
