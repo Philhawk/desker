@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-md-6">
-    <%= image_tag @desk.thumbnail.url%>
+    <%= image_tag @desk.thumbnail.url(:small) if @desk.thumbnail.url.present? %>
   </div>
   <div class="col-md-6">
     <%= image_tag "http://maps.google.com/maps/api/staticmap?size=500x325&sensor=false&zoom=16&markers=#{@desk.latitude}%2C#{@desk.longitude}" %> 

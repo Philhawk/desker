@@ -2,6 +2,10 @@ class DesksController < ApplicationController
   before_action :set_desk, only: [:show, :edit, :update, :destroy]
 
 
+  def mylistings
+    @desks = Desk.where(user: @current_user)
+  end
+
   def search
       if params[:search].present?
         @desks = Desk.search(params[:search])

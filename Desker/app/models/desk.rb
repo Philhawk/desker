@@ -20,6 +20,7 @@
 #
 
 class Desk < ActiveRecord::Base
+	
 	searchkick
 	belongs_to :venue
 	belongs_to :user
@@ -28,11 +29,17 @@ class Desk < ActiveRecord::Base
     validates :title, :presence => true
     validates :price, :presence => true
 	after_validation :geocode
-	has_attached_file :thumbnail, :styles => { :large => "400x>", :medium => "200x>", :thumb => "100x100>" }, :default_url => "default.jpg",
-  					  :storage => :dropbox,
-    				  :dropbox_credentials => Rails.root.join("config/dropbox.yml")
+	# validates_attachment_content_type :thumbnail, :content_type => /\Aimage\/.*\Z/
 
-  	validates_attachment_content_type :thumbnail, :content_type => /\Aimage\/.*\Z/
-  		
-    
+	if Rails.env.development?
+  	  has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default.jpg"
+  	else
+		has_attached_file :thumbnail, :styles => { :large => "400x>", :medium => "200x>", :thumb => "100x100>" }, :default_url => "default.jpg",
+  					  :storage => :dropbox,
+    				  :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+    				 :path => ":style/:id_:filename"
+   end
+
+ 
+
 end

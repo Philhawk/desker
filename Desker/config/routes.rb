@@ -52,6 +52,8 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
+  get 'mylistings' => "desks#mylistings"
+
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'

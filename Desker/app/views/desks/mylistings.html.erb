@@ -1,8 +1,8 @@
 <div class="row">
-   <%  form_for @desk, :html => {:multipart => true} do |f|%>
+   <% for desk in @desks %>
     <div class="col-md-3">
       <div class="thumbnail">
-        <%= image_tag desk.thumbnail %> 
+        <%= image_tag desk.thumbnail.url %> 
          <div class="caption">
             <h3><%= desk.title %></h3>
             <h4><%= desk.description %></h2>
@@ -17,6 +17,3 @@
   </div>
     <% end %>
 </div>
-
-
-<%= link_to 'New Desk', new_desk_path, class: "btn btn-link" %>
