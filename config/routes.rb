@@ -36,9 +36,13 @@
 
 Rails.application.routes.draw do
   
-  resources :users
+  
 
-  resources :venues
+  resources :users, :venues
+
+  resources :desks do
+    resources :reviews, except: [:show, :index]
+  end
 
   resources :desks do
     collection do

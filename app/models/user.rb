@@ -6,6 +6,7 @@
 #  name                :string(255)
 #  email               :string(255)
 #  password_digest     :string(255)
+#  avatar              :text
 #  role                :string(255)
 #  created_at          :datetime
 #  updated_at          :datetime
@@ -18,7 +19,7 @@
 class User < ActiveRecord::Base
   
 
-
+  has_many :reviews, dependent: :destroy
 	has_many :desks
 	has_many :venues
 
