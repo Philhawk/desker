@@ -19,7 +19,7 @@
 class User < ActiveRecord::Base
   
 
-
+  has_many :reviews, dependent: :destroy
 	has_many :desks
 	has_many :venues
 
