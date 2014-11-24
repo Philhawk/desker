@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
     session[:user_id] = nil unless @current_user.present?
   end 
   def check_if_logged_in
-    redirect_to(login_path) if @current_user.nil?, notice: 'Please login first'
+    redirect_to(login_path) if @current_user.nil?
   end
 end

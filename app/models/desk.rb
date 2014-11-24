@@ -25,6 +25,7 @@ class Desk < ActiveRecord::Base
 	belongs_to :venue
 	belongs_to :user
 	has_many :users
+	has_many :reviews
 	geocoded_by :address
     validates :title, :presence => true
     validates :price, :presence => true

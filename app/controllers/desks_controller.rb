@@ -25,6 +25,7 @@ class DesksController < ApplicationController
   # GET /desks/1
   # GET /desks/1.json
   def show
+    @reviews = Review.where(desk_id: @desk.id)
   end
 
   # GET /desks/new
