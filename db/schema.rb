@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141123044717) do
+ActiveRecord::Schema.define(version: 20141124004344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 20141123044717) do
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.integer  "rating"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
