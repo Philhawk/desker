@@ -9,4 +9,7 @@ class ApplicationController < ActionController::Base
     @current_user = User.where(:id => session[:user_id]).first
     session[:user_id] = nil unless @current_user.present?
   end 
+  def check_if_logged_in
+    redirect_to(login_path) if @current_user.nil?, notice: 'Please login first'
+  end
 end
