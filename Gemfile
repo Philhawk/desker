@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'font-awesome-rails', '~> 4.2.0.0'
 
 gem 'bcrypt'
 gem 'haml'
