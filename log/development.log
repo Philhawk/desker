@@ -68017,3 +68017,207 @@ could not connect to server: Connection refused
   Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
   Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
   Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2014-11-24 10:35:24 +1100
+
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (fe80::1) and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.8ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2014-11-24 10:35:28 +1100
+
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (fe80::1) and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 10:35:33 +1100
+
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (fe80::1) and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.5ms)
