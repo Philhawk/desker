@@ -16,7 +16,7 @@ class DesksController < ApplicationController
 
   def index
     if params[:search].present?
-      @desks = Desk.near(params[:search], 5, :order => 'distance')
+      @desks = Desk.near(params[:search], 5, :order => 'distance', :units => :km)
     else
     @desks = Desk.all
     end
