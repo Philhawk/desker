@@ -42,9 +42,6 @@ Rails.application.routes.draw do
 
   resources :desks do
     resources :reviews, except: [:show, :index]
-  end
-
-  resources :desks do
     collection do
       get 'search'
     end
