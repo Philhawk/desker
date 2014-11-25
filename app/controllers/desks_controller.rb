@@ -9,6 +9,7 @@ class DesksController < ApplicationController
   def search
       if params[:search].present?
         @desks = Desk.search(params[:search])
+        @locations = Desk.near(params[:search], 2).to_json
       else
         @desks = Desk.all
       end
@@ -17,6 +18,7 @@ class DesksController < ApplicationController
   def index
     if params[:search].present?
       @desks = Desk.near(params[:search], 5, :order => 'distance', :units => :km)
+
     else
     @desks = Desk.all
     end
