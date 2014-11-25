@@ -76,10 +76,10 @@ video#embedded_video {
 
 #features {
 
-  background-color: black;
+  position: relative; 
+  width: 100vw;
   height: 100vh;
-  position: relative;
-  top: 142px;
+  background-color: #a6cfc4;
 }
 
 #black_triangle {
