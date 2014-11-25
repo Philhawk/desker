@@ -9,16 +9,17 @@
 
 <body>
     
- 
-<%= render 'layouts/header' %>
+<% unless params['action'] == 'index' && params['controller'] == 'pages' %>
+
+  <%= render 'layouts/header' %>
+
+<% end %>
 
 
 
-
-<div class="container">
 
 		<%= yield %>
-</div>
+
 
 
 </body>

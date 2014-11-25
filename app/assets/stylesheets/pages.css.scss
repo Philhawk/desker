@@ -1,3 +1,108 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700);
+
+/** Index Page **/
+
+body {
+  margin: 0px;
+}
+
+#sticky_header {
+  position: fixed;
+  top: 0px;
+  max-width: 100%;
+  max-height: 50px;
+  width: 100%;
+  min-height: 20vh;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  z-index: 10000;
+}
+
+#video_container {
+/*  height: 55vh;*/
+  padding-top: 300px;
+  height: 100vh;
+  /*padding-top: 45vh;*/
+}
+
+video#embedded_video {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background: url(photo-3.jpg) no-repeat;
+  background-size: cover;
+}
+
+#take_your_seat {
+  text-align: center;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-size: 70px;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+#double_down_arrow {
+  position: relative;
+  margin-left: 50%;
+  margin-right: 50%;
+  top: 197px;
+}
+
+#index_search_bar {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 0;
+}
+
+#index_search_bar div {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5); 
+  display: inline-block;
+  line-height: 40px;
+  width: 24.7%;
+  height: 40px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#features {
+
+  background-color: white;
+  height: 100vh;
+  position: relative;
+  top: 142px;
+}
+
+#black_triangle {
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 10vw solid black;
+  position: relative;
+  top: 288px;
+  z-index: 1000;
+}
+
+#desker_logo {
+  height: 20vh;
+  margin: 10px;
+}
+
+#hamburger_menu {
+  height: 5vh;
+  right: 48px;
+  top: 40px;
+  position: absolute;
+
+
+}
+
+

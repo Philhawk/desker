@@ -48,7 +48,7 @@ Rails.application.routes.draw do
   end
 
 
-  root :to => "desks#index"
+  root :to => "pages#index"
 
   get 'pages/about'
 

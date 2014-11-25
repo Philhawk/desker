@@ -4,9 +4,13 @@
   <div class="col-md-6">
     <%= image_tag @desk.thumbnail.url if @desk.thumbnail.url.present? %>
   </div>
-  <div class="col-md-6">
-    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=500x325&sensor=false&zoom=16&markers=#{@desk.latitude}%2C#{@desk.longitude}" %> 
-  </div>
+  <iframe
+  width="500"
+  height="325"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJg0HiO2KtvExTuiWB6rKhmUUsHXFk6dY
+        &q=<%= @desk.address.parameterize %>&zoom=14">>
+</iframe>
    <div class="col-md-6">
 
       <h2><%= @desk.title %></h2>
@@ -27,7 +31,6 @@
                   <td>
                     <div class="star-rating" data-score= <%= review.rating %> ></div>
                      <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
-                      
                   </td>
                 </tr>
               <% end %>
