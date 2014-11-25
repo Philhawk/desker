@@ -99274,3 +99274,3159 @@ Migrating to AddDeskIdToReviews (20141124054209)
   [1m[35mSQL (35.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124054209"]]
   [1m[36m (76.4ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 11:47:46 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (17.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (15.4ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered desks/index.html.erb within layouts/application (274.0ms)
+  Rendered layouts/_header.html.erb (63.8ms)
+Completed 200 OK in 6024ms (Views: 5798.9ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:53 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:53 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:53 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:53 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:53 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:53 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:54 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 11:47:58 +1100
+Processing by DesksController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered desks/_form.html.erb (127.0ms)
+  Rendered desks/new.html.erb within layouts/application (129.9ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 529ms (Views: 522.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 11:47:59 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 11:50:45 +1100
+Processing by DesksController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered desks/_form.html.erb (35.6ms)
+  Rendered desks/new.html.erb within layouts/application (37.6ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+Completed 200 OK in 1891ms (Views: 1876.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 11:50:48 +1100
+
+
+Started DELETE "/login" for 127.0.0.1 at 2014-11-25 12:00:39 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"psyptZ6U9U00Yg21q7vXKogEhF7lu4wY5J+iHtT7X90="}
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:00:40 +1100
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (11.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (99.6ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (23.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered desks/index.html.erb within layouts/application (267.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 993ms (Views: 852.6ms | ActiveRecord: 136.0ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 12:00:41 +1100
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-25 12:09:02 +1100
+Processing by UsersController#new as HTML
+  Parameters: {"authenticity_token"=>"psyptZ6U9U00Yg21q7vXKogEhF7lu4wY5J+iHtT7X90="}
+  [1m[36mUser Load (15.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/_form.html.erb (93.9ms)
+  Rendered users/new.html.erb within layouts/application (118.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 593ms (Views: 548.6ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:03 +1100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (0.7ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered desks/index.html.erb within layouts/application (29.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 403ms (Views: 396.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:10 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:11 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:11 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:11 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:11 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:11 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:11 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:11 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:11 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:11 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 12:09:13 +1100
+Processing by DesksController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered desks/_form.html.erb (19.0ms)
+  Rendered desks/new.html.erb within layouts/application (45.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 498ms (Views: 463.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 12:09:14 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 12:10:44 +1100
+Processing by DesksController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered desks/_form.html.erb (5.8ms)
+  Rendered desks/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 485ms (Views: 482.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 12:10:45 +1100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:29:15 +1100
+Processing by DesksController#index as HTML
+  [1m[36mUser Load (23.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDesk Load (0.8ms)[0m  SELECT "desks".* FROM "desks"
+  [1m[36mUser Load (6.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered desks/index.html.erb within layouts/application (1763.1ms)
+  Rendered layouts/_header.html.erb (14.0ms)
+Completed 200 OK in 10605ms (Views: 7793.4ms | ActiveRecord: 31.7ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 12:29:30 +1100
+
+
+Started GET "/desks/search?utf8=%E2%9C%93&search=bondi" for 127.0.0.1 at 2014-11-25 12:29:38 +1100
+Processing by DesksController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"bondi"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[33mDesk Search (16894.8ms)[0m  curl http://localhost:9200/desks_development/_search?pretty -d '{"query":{"dis_max":{"queries":[{"match":{"_all":{"query":"bondi","operator":"and","boost":10,"analyzer":"searchkick_search"}}},{"match":{"_all":{"query":"bondi","operator":"and","boost":10,"analyzer":"searchkick_search2"}}},{"match":{"_all":{"query":"bondi","operator":"and","boost":1,"fuzziness":1,"max_expansions":3,"analyzer":"searchkick_search"}}},{"match":{"_all":{"query":"bondi","operator":"and","boost":1,"fuzziness":1,"max_expansions":3,"analyzer":"searchkick_search2"}}}]}},"size":100000,"from":0,"fields":[]}'
+  [1m[36mDesk Load (92.6ms)[0m  [1mSELECT "desks".* FROM "desks"  WHERE "desks"."id" IN (8)[0m
+  Rendered desks/search.html.erb within layouts/application (906.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 33260ms (Views: 4509.6ms | Searchkick: 16894.8ms | ActiveRecord: 93.3ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 12:30:12 +1100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:39:31 +1100
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (25.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (0.9ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (11.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered desks/index.html.erb within layouts/application (691.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 4336ms (Views: 3854.1ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 12:39:36 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 12:40:11 +1100
+Processing by DesksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered desks/_form.html.erb (424.9ms)
+  Rendered desks/new.html.erb within layouts/application (438.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 1073ms (Views: 1019.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 12:40:12 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 13:20:15 +1100
+Processing by DesksController#new as HTML
+  [1m[35mUser Load (153.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered desks/_form.html.erb (568.9ms)
+  Rendered desks/new.html.erb within layouts/application (656.0ms)
+  Rendered layouts/_header.html.erb (23.6ms)
+Completed 200 OK in 7029ms (Views: 6239.4ms | ActiveRecord: 153.6ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:31 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:31 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:31 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:31 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:31 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:32 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 13:20:32 +1100
+Processing by DesksController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered desks/_form.html.erb (1025.8ms)
+  Rendered desks/new.html.erb within layouts/application (1144.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 11516ms (Views: 11328.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:44 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:44 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:44 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:44 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:44 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:45 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 13:20:46 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 13:21:47 +1100
+Processing by DesksController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered desks/_form.html.erb (314.4ms)
+  Rendered desks/new.html.erb within layouts/application (321.1ms)
+Completed 500 Internal Server Error in 491ms
+
+ActionView::Template::Error (undefined method `office' for #<Desk:0x007fca99ca1cd0>):
+    51: 
+    52:  <div class="btn-group" data-toggle="buttons">
+    53:     <%= f.label :desk_type, class: "btn btn-primary active" %><br>
+    54:     <%= f.radio_button :office, "Office" %>
+    55:   </div>
+    56: 
+    57: 
+  app/views/desks/_form.html.erb:54:in `block in _app_views_desks__form_html_erb___1316790838388781358_70254070153380'
+  app/views/desks/_form.html.erb:1:in `_app_views_desks__form_html_erb___1316790838388781358_70254070153380'
+  app/views/desks/new.html.erb:3:in `_app_views_desks_new_html_erb___3173230025577777097_70254068288620'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (192.3ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (27.9ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (295.1ms)
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 13:22:18 +1100
+Processing by DesksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered desks/_form.html.erb (36.6ms)
+  Rendered desks/new.html.erb within layouts/application (37.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 527ms (Views: 506.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 13:22:19 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 13:26:29 +1100
+Processing by DesksController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered desks/_form.html.erb (7.2ms)
+  Rendered desks/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 587ms (Views: 539.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:30 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 13:26:41 +1100
+Processing by DesksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered desks/_form.html.erb (6.9ms)
+  Rendered desks/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 418ms (Views: 396.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 13:26:42 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 13:57:58 +1100
+Processing by DesksController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered desks/_form.html.erb (31.3ms)
+  Rendered desks/new.html.erb within layouts/application (32.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 633ms (Views: 630.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 13:57:59 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+Processing by DesksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered desks/_form.html.erb (7.8ms)
+  Rendered desks/new.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 395ms (Views: 392.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 13:58:19 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 14:17:36 +1100
+Processing by DesksController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered desks/_form.html.erb (8.0ms)
+  Rendered desks/new.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 741ms (Views: 738.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 14:17:37 +1100
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-25 14:35:10 +1100
+Processing by SessionController#new as HTML
+  Parameters: {"authenticity_token"=>"psyptZ6U9U00Yg21q7vXKogEhF7lu4wY5J+iHtT7X90="}
+  [1m[36mUser Load (15.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered session/new.haml within layouts/application (341.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 3164ms (Views: 2960.6ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-25 14:35:14 +1100
+Processing by SessionController#new as HTML
+  Parameters: {"authenticity_token"=>"psyptZ6U9U00Yg21q7vXKogEhF7lu4wY5J+iHtT7X90="}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered session/new.haml within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 386ms (Views: 383.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:14 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:14 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:14 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:14 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:14 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:14 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:15 +1100
+
+
+Started POST "/login" for 127.0.0.1 at 2014-11-25 14:35:34 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"psyptZ6U9U00Yg21q7vXKogEhF7lu4wY5J+iHtT7X90=", "email"=>"phil@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (708.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'phil@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 1128ms (ActiveRecord: 708.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 14:35:35 +1100
+Processing by DesksController#index as HTML
+  [1m[36mUser Load (9.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDesk Load (47.3ms)[0m  SELECT "desks".* FROM "desks"
+  [1m[36mUser Load (91.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered desks/index.html.erb within layouts/application (446.2ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 899ms (Views: 747.9ms | ActiveRecord: 148.8ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 14:35:36 +1100
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2014-11-25 14:40:41 +1100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered users/_form.html.erb (5.5ms)
+  Rendered users/edit.html.erb within layouts/application (50.1ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 607ms (Views: 538.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:42 +1100
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (29.4ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+Completed 200 OK in 402ms (Views: 397.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:56 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 14:40:57 +1100
+
+
+Started GET "/mylistings.12" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+Processing by DesksController#mylistings as 
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (43.3ms)[0m  [1mSELECT "desks".* FROM "desks"  WHERE "desks"."user_id" = 12[0m
+  Rendered desks/mylistings.html.erb within layouts/application (45.2ms)
+  Rendered layouts/_header.html.erb (29.6ms)
+Completed 200 OK in 496ms (Views: 449.1ms | ActiveRecord: 44.1ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:20 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 14:41:21 +1100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 15:47:18 +1100
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (159.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (53.2ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (9.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered desks/index.html.erb within layouts/application (4330.2ms)
+  Rendered layouts/_header.html.erb (38.6ms)
+Completed 200 OK in 51931ms (Views: 50244.5ms | ActiveRecord: 223.4ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:14 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:15 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:15 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:15 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:15 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:15 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:15 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:15 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:16 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:16 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:16 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:16 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 15:48:16 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 15:52:18 +1100
+Processing by DesksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered desks/_form.html.erb (156.3ms)
+  Rendered desks/new.html.erb within layouts/application (185.6ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 1100ms (Views: 1078.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 15:52:20 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 15:53:26 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 15:53:27 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 15:53:27 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 15:53:27 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 15:53:27 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 15:53:27 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 15:53:28 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 15:53:28 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 15:56:38 +1100
+Processing by DesksController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered desks/_form.html.erb (143.5ms)
+  Rendered desks/new.html.erb within layouts/application (159.1ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 1316ms (Views: 1262.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 15:56:41 +1100
+
+
+Started GET "/desks/new" for 127.0.0.1 at 2014-11-25 16:00:47 +1100
+Processing by DesksController#new as HTML
+  [1m[36mUser Load (19.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 12  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered desks/_form.html.erb (28.2ms)
+  Rendered desks/new.html.erb within layouts/application (30.2ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 862ms (Views: 811.5ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 16:00:48 +1100
+
+
+Started DELETE "/login" for 127.0.0.1 at 2014-11-25 17:35:17 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"psyptZ6U9U00Yg21q7vXKogEhF7lu4wY5J+iHtT7X90="}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 12  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 495ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 17:35:18 +1100
+Processing by DesksController#index as HTML
+  [1m[36mUser Load (26.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDesk Load (102.8ms)[0m  SELECT "desks".* FROM "desks"
+  [1m[36mUser Load (82.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered desks/index.html.erb within layouts/application (424.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 2769ms (Views: 829.2ms | ActiveRecord: 212.9ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:23 +1100
+
+
+Started GET "/desks/9" for 127.0.0.1 at 2014-11-25 17:35:49 +1100
+Processing by DesksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (25.1ms)[0m  [1mSELECT  "desks".* FROM "desks"  WHERE "desks"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mReview Load (878.4ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."desk_id" = 9  ORDER BY created_at DESC
+  [1m[36mDesk Load (543.6ms)[0m  [1mSELECT desks.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.864642 - desks.latitude) * PI() / 180 / 2), 2) + COS(-33.864642 * PI() / 180) * COS(desks.latitude * PI() / 180) * POWER(SIN((151.278108 - desks.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((desks.longitude - 151.278108) / 57.2957795), ((desks.latitude - -33.864642) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "desks"  WHERE (desks.latitude BETWEEN -34.1541055662217 AND -33.575178433778305 AND desks.longitude BETWEEN 150.92950637010586 AND 151.62670962989415 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.864642 - desks.latitude) * PI() / 180 / 2), 2) + COS(-33.864642 * PI() / 180) * COS(desks.latitude * PI() / 180) * POWER(SIN((151.278108 - desks.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 20 AND desks.id != 9)  ORDER BY distance ASC[0m
+  Rendered desks/show.html.erb within layouts/application (777.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 3114ms (Views: 1085.5ms | ActiveRecord: 1447.9ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:53 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 17:35:54 +1100
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2014-11-25 17:35:55 +1100

@@ -23,10 +23,36 @@
     <%= f.label :price %><br>
     <%= f.number_field :price, class: "form-control" %>
   </div>
-     <div class="form-group">
+  <div class="form-group">
     <%= f.label :address %><br>
     <%= f.text_field :address, class: "form-control" %>
   </div>
+
+  <div class="btn-group" data-toggle="buttons">
+    <p>Desk Type</p>
+  <label class="btn btn-primary active">
+    <input type="radio" name="desk[desk_type]" id="option1" autocomplete="off" checked value="Hot desk"> Hot Desk
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="desk[desk_type]" id="option2" autocomplete="off" value="Studio"> Studio
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="desk[desk_type]" id="option3" autocomplete="off" value="Office"> Office
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="desk[desk_type]" id="option3" autocomplete="off" value="Warehouse"> Warehouse
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="desk[desk_type]" id="option3" autocomplete="off" value="Co-Working Space"> Co-Working Space 
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="desk[desk_type]" id="option3" autocomplete="off" value="Business Centre"> Business Centre 
+  </label>
+</div>
+
+
+
+
    <div class="form-group">
     <%= f.label :desk_type %><br>
     <%= f.text_field :desk_type, class: "form-control" %>
