@@ -4,11 +4,18 @@
   <div class="col-md-6">
     <%= image_tag @desk.thumbnail.url if @desk.thumbnail.url.present? %>
   </div>
-  <div class="col-md-6">
-    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=500x325&sensor=false&zoom=16&markers=#{@desk.latitude}%2C#{@desk.longitude}" %> 
-  </div>
+  <iframe
+  width="500"
+  height="325"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJg0HiO2KtvExTuiWB6rKhmUUsHXFk6dY
+        &q=<%= @desk.address.parameterize %>&zoom=14">>
+</iframe>
    <div class="col-md-6">
+
       <h2><%= @desk.title %></h2>
+      <h2><div class="star-rating" data-score= <%= @avg_rating %> ></div> </h2>
+      <p><%= "#{@reviews.length} reviews" %></p>
       <h3><%= @desk.description %></h3>
       <p>$<%= @desk.price %>/week $<%= (@desk.price)/7 %>/day  </p>
       <p><%= @desk.address %></p>
@@ -17,23 +24,42 @@
          <% if @reviews.blank? %>
              <h2>No reviews yet. Be the first to write one!</h2>
          <% else %>
-        <% @reviews.each do |review| %>
-          <p><%= review.rating %></p>
-          <p><%= review.comment %></p>
-          <% end %>
+         <table class="table">
+            <tbody>
+              <% @reviews.each do |review| %>
+                <tr>
+                  <td>
+                    <div class="star-rating" data-score= <%= review.rating %> ></div>
+                     <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>
         <% end %>
+        <%= link_to 'Write A Review', new_desk_review_path(@desk), class: "btn btn-primary" %> 
     </div>
-    <div class="col-md-16">
+    <div class="col-md-12">
     <h3>Nearby desks:</h3>
       <% for desk in @desk.nearbys(20) %>
       <li><%= link_to desk.address, desk %> (<%=  desk.distance.round(2)%>km) </li>
       <% end %>
   </div>
     <div class="col-md-12">
-        <%= link_to 'Write A Review', new_desk_review_path(@desk), class: "btn btn-primary" %> |
+    <% if @current_user.present? && @current_user.id == desk.user_id %>
         <%= link_to 'Edit', edit_desk_path(@desk), class: "btn btn-link" %> |
         <%= link_to 'Back', desks_path, class: "btn btn-link" %>
+         <% end %>
     </div>
 </div>
 
 
+
+<script>
+  $('.star-rating').raty({ path:'/assets/',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+</script>

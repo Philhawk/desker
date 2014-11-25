@@ -1,5 +1,5 @@
 class DesksController < ApplicationController
-  before_action :set_desk, only: [:show, :edit, :update, :destroy]
+  #before_action :set_desk, only: [:show, :edit, :update, :destroy, :search]
 
 
   def mylistings
@@ -16,7 +16,7 @@ class DesksController < ApplicationController
 
   def index
     if params[:search].present?
-      @desks = Desk.near(params[:search], 5, :order => 'distance')
+      @desks = Desk.near(params[:search], 5, :order => 'distance', :units => :km)
     else
     @desks = Desk.all
     end
@@ -25,8 +25,15 @@ class DesksController < ApplicationController
   # GET /desks/1
   # GET /desks/1.json
   def show
-    @reviews = Review.where(desk_id: @desk.id)
+    @desk = Desk.find(params[:id])
+    @reviews = Review.where(desk_id: @desk.id).order("created_at DESC")
+    if @reviews.blank?
+      @avg_rating = 0
+    else
+      @avg_rating = @reviews.average(:rating).round(2)
+    end
   end
+
 
   # GET /desks/new
   def new
@@ -35,6 +42,7 @@ class DesksController < ApplicationController
 
   # GET /desks/1/edit
   def edit
+    @desk = Desk.find(params[:id])
   end
 
   # POST /desks
@@ -58,6 +66,7 @@ class DesksController < ApplicationController
   # PATCH/PUT /desks/1
   # PATCH/PUT /desks/1.json
   def update
+    @desk = Desk.find(params[:id])
     respond_to do |format|
       if @desk.update(desk_params)
         format.html { redirect_to @desk, notice: 'Desk was successfully updated.' }
@@ -72,6 +81,7 @@ class DesksController < ApplicationController
   # DELETE /desks/1
   # DELETE /desks/1.json
   def destroy
+    @desk = Desk.find(params[:id])
     @desk.destroy
     respond_to do |format|
       format.html { redirect_to desks_url, notice: 'Desk was successfully destroyed.' }
@@ -81,9 +91,9 @@ class DesksController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_desk
-      @desk = Desk.find(params[:id])
-    end
+    # def set_desk
+    #   @desk = Desk.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def desk_params

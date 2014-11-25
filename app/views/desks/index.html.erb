@@ -2,16 +2,20 @@
    <% for desk in @desks %>
     <div class="col-md-3">
       <div class="thumbnail">
-        <%= image_tag desk.thumbnail %> 
+        <%= link_to image_tag(desk.thumbnail), desk  %> 
          <div class="caption">
-            <h3><%= desk.title %></h3>
+           <h3><%= desk.title %></h3>
             <h4><%= desk.description %></h2>
             <p><%= number_to_currency(desk.price) %>/week</p>
             <p><%= desk.address %></p>
              <p>Rented by: <%= desk.user.name %></p>
+              <% if @current_user.present? && @current_user.id == desk.user_id %>
              <%= link_to 'Show', desk, class: "btn btn-link" %>
              <%= link_to 'Edit', edit_desk_path(desk), class: "btn btn-link" %>
               <%= link_to 'Destroy', desk, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+              <% else %>
+            
+             <% end %>
          </div>
      </div>     
   </div>
