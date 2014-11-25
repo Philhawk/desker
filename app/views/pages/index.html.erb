@@ -16,24 +16,31 @@
 			<video autoplay loop poster="photo-3.jpg" id="embedded_video">
 	    	<source src="https://s3-ap-southeast-2.amazonaws.com/desker/desker_index_video.mp4" type="video/mp4">
 	   	</video>
+
 	   	<h1 id="take_your_seat">TAKE YOUR SEAT</h1>
+
 	   	 <div class="search">
-	   	 <%= form_tag search_desks_path, method: :get, class: "navbar-form navbar-left" do %>
-            <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Find your desk" %>
+	   	 <%= form_tag search_desks_path, method: :get do %>
+            <%= text_field_tag :search, params[:search], id: "index_search", placeholder: "Where do you want to go?" %>
         <% end %>
         </div>
+
       <img id="double_down_arrow" src="/assets/double_down_arrow.png" alt="">
 	  </div>
-		
-	  <div id="features"></div>
 
-<<<<<<< HEAD
-=======
-	
+		<div id="about_desker">
+			<h3>Find a space</h3>
+			<h4>Everyone needs that particular spot that helps them create and innovate</h4>
+			<h3>List a space</h3>
+			<h4>Put that empty desk at the corner of the office to good use</h4>
+		</div>
+		
 	  <div id="features">
-	  	
+	  	<a href="/search?utf8=✓&search=perth"><img id="feature_images" src="/assets/desker_feature_perth.jpg" alt=""></a>
+	  	<a href="/search?utf8=✓&search=brisbane"><img id="feature_images" src="/assets/desker_feature_brisbane.jpg" alt=""></a>
+	  	<a href="/search?utf8=✓&search=sydney"><img id="feature_images" src="/assets/desker_feature_sydney.jpg" alt=""></a>
+	  	<a href="/search?utf8=✓&search=melbourne"><img id="feature_images" src="/assets/desker_feature_melbourne.jpg" alt=""></a>
 	  </div>
-	
->>>>>>> e605e3a65dad6813e89aaa6088c2b96d523fedcc
+
 </body>
 </html>

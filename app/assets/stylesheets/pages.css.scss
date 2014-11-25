@@ -46,41 +46,41 @@ video#embedded_video {
   margin: 0;
 }
 
+#index_search {
+  position: relative;
+  min-width: 300px;
+  text-align: center;
+  margin-left: 35%;
+  margin-right: 65%;
+  margin-top: 5%;
+}
+
 #double_down_arrow {
   position: relative;
-  margin-left: 50%;
-  margin-right: 50%;
-  top: 115px;
-}
-
-#index_search_bar {
-  position: absolute;
-  top: 100vh;
-  /*margin-top: -40px;*/
-  left: 0;
-  width: 100%;
-  padding: 0;
-}
-
-#index_search_bar div {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.5); 
-  display: inline-block;
-  line-height: 40px;
-  width: 24.7%;
-  height: 40px;
-  position: relative;
-  margin: 0;
-  padding: 0;
+  margin-left: 45%;
+  margin-right: 55%;
+  top: 45px;
 }
 
 #features {
 
-  position: relative; 
+  position: relative;
+  text-align: center; 
   width: 100vw;
   height: 100vh;
-  background-color: #a6cfc4;
+  background-color: #D59B8F;
+  padding: 20px;
 }
+
+#about_desker {
+  position: relative;
+  text-align: center; 
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  padding: 20px;
+}
+
 
 #black_triangle {
   width: 0;
@@ -103,7 +103,11 @@ video#embedded_video {
   right: 48px;
   top: 40px;
   position: absolute;
+}
 
+#feature_images {
+  display: inline-block;
+  margin: 20px;
 
 }
 
