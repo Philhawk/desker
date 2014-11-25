@@ -1,5 +1,5 @@
 class DesksController < ApplicationController
-  before_action :set_desk, only: [:show, :edit, :update, :destroy]
+  before_action :set_desk, only: [:show, :edit, :update, :destroy, :search]
 
 
   def mylistings
@@ -25,8 +25,14 @@ class DesksController < ApplicationController
   # GET /desks/1
   # GET /desks/1.json
   def show
-    @reviews = Review.where(desk_id: @desk.id)
+    @reviews = Review.where(desk_id: @desk.id).order("created_at DESC")
+    if @reviews.blank?
+      @avg_rating = 0
+    else
+      @avg_rating = @reviews.average(:rating).round(2)
+    end
   end
+
 
   # GET /desks/new
   def new

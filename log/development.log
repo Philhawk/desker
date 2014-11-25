@@ -96350,3 +96350,209 @@ Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-24 17:52:45 +110
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 17:52:45 +1100
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mReview Load (0.7ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."user_id" = $1  [["user_id", 1]]
+  [1m[36mSQL (2.5ms)[0m  [1mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "reviews" WHERE "reviews"."id" = $1  [["id", 3]]
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "reviews" WHERE "reviews"."id" = $1  [["id", 5]]
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.8ms)[0m  COMMIT
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/users/avatars/000/000/001/original/joel.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/users/avatars/000/000/001/medium/joel.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/users/avatars/000/000/001/thumb/joel.jpg
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."user_id" = $1  [["user_id", 2]]
+  [1m[36mSQL (7.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (11.2ms)[0m  COMMIT
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/users/avatars/000/000/002/original/joel.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/users/avatars/000/000/002/medium/joel.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/users/avatars/000/000/002/thumb/joel.jpg
+  [1m[36mDesk Load (0.9ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "desks" WHERE "desks"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.3ms)[0m  COMMIT
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/012/original/sample4.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/012/large/sample4.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/012/medium/sample4.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/012/thumb/sample4.jpg
+  [1m[33mDesk Remove (134.0ms)[0m  {"id":12}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "desks" WHERE "desks"."id" = $1  [["id", 13]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/013/original/sample2.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/013/large/sample2.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/013/medium/sample2.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/013/thumb/sample2.jpg
+  [1m[33mDesk Remove (34.3ms)[0m  {"id":13}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "desks" WHERE "desks"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.4ms)[0m  COMMIT
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/014/original/sample3.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/014/large/sample3.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/014/medium/sample3.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/014/thumb/sample3.jpg
+  [1m[33mDesk Remove (29.1ms)[0m  {"id":14}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "desks" WHERE "desks"."id" = $1  [["id", 15]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/015/original/sample5.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/015/large/sample5.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/015/medium/sample5.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/015/thumb/sample5.jpg
+  [1m[33mDesk Remove (14.9ms)[0m  {"id":15}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "desks" WHERE "desks"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  COMMIT
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/011/original/sampledesk1.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/011/large/sampledesk1.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/011/medium/sampledesk1.jpg
+[paperclip] deleting /Users/PhilJacob/Desktop/Desker/public/system/desks/thumbnails/000/000/011/thumb/sampledesk1.jpg
+  [1m[33mDesk Remove (26.1ms)[0m  {"id":11}
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-1167r4c.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix.jpg[0]' -auto-orient -resize "200" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix20141124-33238-11f17lo'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix20141124-33238-11f17lo'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix20141124-33238-tcx3a6'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-3dq4ix20141124-33238-tcx3a6'
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141124-33238-cfxcy0.jpg'
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "users" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "created_at", "email", "name", "password_digest", "role", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["avatar_content_type", "image/jpeg"], ["avatar_file_name", "Groucho_Marx_-_portrait.jpg"], ["avatar_file_size", 440455], ["avatar_updated_at", "2014-11-24 07:09:23.449372"], ["created_at", "2014-11-24 07:09:23.887880"], ["email", "groucho@gmail.com"], ["name", "Groucho"], ["password_digest", "$2a$10$vowKg68YITKS3JrHbd6eAui6mVQl1EXJJaXRP4M/CVdSvKSIPgVAa"], ["role", "user"], ["updated_at", "2014-11-24 07:09:23.887880"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey4[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey4[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey4[0]' -auto-orient -resize "200" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey420141124-33238-qv5sc2'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey420141124-33238-qv5sc2'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey4[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey4[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey4[0]' -auto-orient -resize "100x100>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey420141124-33238-cyofyo'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-d7mey420141124-33238-cyofyo'
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "created_at", "email", "name", "password_digest", "role", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["avatar_content_type", "image/jpeg"], ["avatar_file_name", "images"], ["avatar_file_size", 5819], ["avatar_updated_at", "2014-11-24 07:09:24.250046"], ["created_at", "2014-11-24 07:09:24.367261"], ["email", "harpo@gmail.com"], ["name", "Harpo"], ["password_digest", "$2a$10$o7LCsPfA4jNlHm6BHGVqb.c91rc1UBPL49WyMCfzwYp5O2Ia7v9Ge"], ["role", "user"], ["updated_at", "2014-11-24 07:09:24.367261"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs[0]' -auto-orient -resize "200" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs20141124-33238-7viwio'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs20141124-33238-7viwio'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs[0]' -auto-orient -resize "100x100>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs20141124-33238-1itqyv1'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/59b514174bffe4ae402b3d63aad79fe020141124-33238-1vu4wgs20141124-33238-1itqyv1'
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "created_at", "email", "name", "password_digest", "role", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["avatar_content_type", "image/jpeg"], ["avatar_file_name", "images"], ["avatar_file_size", 7230], ["avatar_updated_at", "2014-11-24 07:09:25.262020"], ["created_at", "2014-11-24 07:09:25.389242"], ["email", "chiko@gmail.com"], ["name", "Chiko"], ["password_digest", "$2a$10$ohWw7u9o5e3LzAuEHUMZRefOMdUfGbq30gtka8fQl1URvnxwIYet."], ["role", "user"], ["updated_at", "2014-11-24 07:09:25.389242"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-2l1ng0.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel0.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel0.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel0.jpg[0]' -auto-orient -resize "400>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel020141124-33238-lbib9x'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel020141124-33238-lbib9x'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel0.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel0.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel0.jpg[0]' -auto-orient -resize "200>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel020141124-33238-1q6bi0q'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel020141124-33238-1q6bi0q'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel0.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel0.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel0.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel020141124-33238-16lta8v'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-1q6tel020141124-33238-16lta8v'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141124-33238-14vqgtf.jpg'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["address", "2 Holt St, Surry Hills"], ["created_at", "2014-11-24 07:09:28.790685"], ["description", "We are a highly curated community of tech-based startups and mutually supportive businesses in Sydney."], ["desk_type", "Dedicated / Fixed Desk"], ["latitude", -33.884988], ["longitude", 151.209276], ["price", 100], ["thumbnail_content_type", "image/jpeg"], ["thumbnail_file_name", "PS_LES_-_Screen_(resized).jpg"], ["thumbnail_file_size", 88471], ["thumbnail_updated_at", "2014-11-24 07:09:27.797546"], ["title", "Projective Space"], ["updated_at", "2014-11-24 07:09:28.790685"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[33mDesk Store (39.7ms)[0m  {"id":16}
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-1hoei3l.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a.jpg[0]' -auto-orient -resize "400>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a20141124-33238-df6mcw'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a20141124-33238-df6mcw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a.jpg[0]' -auto-orient -resize "200>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a20141124-33238-u7mxz5'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a20141124-33238-u7mxz5'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a20141124-33238-1p7283y'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-di8l8a20141124-33238-1p7283y'
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141124-33238-1fjkill.jpg'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["address", "55 York St, Sydney"], ["created_at", "2014-11-24 07:09:30.968955"], ["description", "Belsham Street Studios are a beautifully finished creative shared workspace in the heart of Hackney Central."], ["desk_type", "Fashion Hub"], ["latitude", -33.867218], ["longitude", 151.205627], ["price", 250], ["thumbnail_content_type", "image/jpeg"], ["thumbnail_file_name", "FB_1st_Flr.jpg"], ["thumbnail_file_size", 48555], ["thumbnail_updated_at", "2014-11-24 07:09:30.105457"], ["title", "Belsham Street Studios"], ["updated_at", "2014-11-24 07:09:30.968955"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (29.0ms)[0m  {"id":17}
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-19wgqt4.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr.png[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr.png[0]' -auto-orient -resize "400>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr20141124-33238-2t71vi'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr20141124-33238-2t71vi'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr.png[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr.png[0]' -auto-orient -resize "200>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr20141124-33238-1luqvxa'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr20141124-33238-1luqvxa'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr.png[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr.png[0]' -auto-orient -resize "100x100>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr20141124-33238-16d52vr'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-x3ddhr20141124-33238-16d52vr'
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141124-33238-146za76.png'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["address", "3 Glenayr St, Bondi"], ["created_at", "2014-11-24 07:09:32.929153"], ["description", "We are a friendly creative studio full of people from varying industries... photography, film, product, graphic design and 3d rendering."], ["desk_type", "Creative Desk Space / Hot Desk"], ["latitude", -33.8821686], ["longitude", 151.2756732], ["price", 300], ["thumbnail_content_type", "image/png"], ["thumbnail_file_name", "Screen_Shot_2014-11-13_at_12.47.35.png"], ["thumbnail_file_size", 235635], ["thumbnail_updated_at", "2014-11-24 07:09:32.187999"], ["title", "Crown Works"], ["updated_at", "2014-11-24 07:09:32.929153"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[33mDesk Store (30.3ms)[0m  {"id":18}
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1eyb88z.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k99452.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k99452.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k99452.jpg[0]' -auto-orient -resize "400>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k9945220141124-33238-5pt1pu'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k9945220141124-33238-5pt1pu'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k99452.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k99452.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k99452.jpg[0]' -auto-orient -resize "200>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k9945220141124-33238-1ox6jrl'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k9945220141124-33238-1ox6jrl'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k99452.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k99452.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k99452.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k9945220141124-33238-xpy7o0'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-1k9945220141124-33238-xpy7o0'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141124-33238-xnk1y0.jpg'
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["address", "14 Old South Head Road, Vaucluse"], ["created_at", "2014-11-24 07:09:34.664408"], ["description", "Deskspace in MiLLERS JUNCTION, the creative studios attached to PRINT CLUB VAUCLUSE!"], ["desk_type", "Creative Desk Space / Hot Desk"], ["latitude", -33.864642], ["longitude", 151.278108], ["price", 220], ["thumbnail_content_type", "image/jpeg"], ["thumbnail_file_name", "galleryweb2.jpg"], ["thumbnail_file_size", 64193], ["thumbnail_updated_at", "2014-11-24 07:09:34.071421"], ["title", "Millers Junction"], ["updated_at", "2014-11-24 07:09:34.664408"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (29.7ms)[0m  {"id":19}
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-1pn3s8i.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u8.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u8.jpg[0]' -auto-orient -resize "400>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u820141124-33238-9bxrf4'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u820141124-33238-9bxrf4'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u8.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u8.jpg[0]' -auto-orient -resize "200>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u820141124-33238-tw4h8g'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u820141124-33238-tw4h8g'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u8.jpg[0]'
+Command :: convert '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u8.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u820141124-33238-wzox3m'
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-21a8u820141124-33238-wzox3m'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/0s/thwh32ns7kd_8_lvss8hww1h0000gn/T/bb45d2c081cad4170d8cfc160287670220141124-33238-1kx2f7j.jpg'
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["address", "2 George St, Sydney"], ["created_at", "2014-11-24 07:09:36.539247"], ["description", "We support early stage businesses with awesome co-working spaces, a lively community, mentors + biz support."], ["desk_type", "Creative Desk Space / Hot Desk"], ["latitude", -33.8735643], ["longitude", 151.2069237], ["price", 200], ["thumbnail_content_type", "image/jpeg"], ["thumbnail_file_name", "578215_549587745075570_25973020_n.jpg"], ["thumbnail_file_size", 31172], ["thumbnail_updated_at", "2014-11-24 07:09:35.553529"], ["title", "Bathtub 2 Boardroom"], ["updated_at", "2014-11-24 07:09:36.539247"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[33mDesk Store (13.6ms)[0m  {"id":20}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 16  [["updated_at", "2014-11-24 07:09:36.998550"], ["user_id", 3]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (7.4ms)[0m  {"id":16}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 18[0m  [["updated_at", "2014-11-24 07:09:37.347168"], ["user_id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[33mDesk Store (8.0ms)[0m  {"id":18}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 20  [["updated_at", "2014-11-24 07:09:38.148470"], ["user_id", 4]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (7.7ms)[0m  {"id":20}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 19[0m  [["updated_at", "2014-11-24 07:09:38.485131"], ["user_id", 5]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[33mDesk Store (6.9ms)[0m  {"id":19}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 17  [["updated_at", "2014-11-24 07:09:39.004371"], ["user_id", 5]]
+  [1m[36m (7.3ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (6.5ms)[0m  {"id":17}

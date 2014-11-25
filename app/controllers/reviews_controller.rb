@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
   before_action :set_review, only: [:edit, :update, :destroy]
   before_action :check_if_logged_in, :only => [:create]
   before_action :set_desk
+  before_action :check_user, only: [:edit, :update, :destroy]
 
   # GET /reviews/new
   def new
@@ -62,6 +63,12 @@ class ReviewsController < ApplicationController
 
     def set_desk
       @desk = Desk.find(params[:desk_id])
+    end
+
+    def check_user
+      unless @review.user == current_user
+        redirect_to root_url, alert: "Sorry, this review belongs to someone else"
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

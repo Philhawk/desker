@@ -12,4 +12,5 @@ class ApplicationController < ActionController::Base
   def check_if_logged_in
     redirect_to(login_path) if @current_user.nil?
   end
+
 end
