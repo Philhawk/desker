@@ -50,7 +50,7 @@ video#embedded_video {
   position: relative;
   margin-left: 50%;
   margin-right: 50%;
-  top: 197px;
+  top: 115px;
 }
 
 #index_search_bar {
@@ -73,11 +73,10 @@ video#embedded_video {
 }
 
 #features {
-
-  background-color: white;
+  position: relative; 
+  width: 100vw;
   height: 100vh;
-  position: relative;
-  top: 142px;
+  background-color: #a6cfc4;
 }
 
 #black_triangle {
