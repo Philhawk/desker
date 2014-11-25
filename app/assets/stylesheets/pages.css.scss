@@ -54,8 +54,10 @@ video#embedded_video {
 }
 
 #index_search_bar {
-  position: fixed;
-  bottom: 0px;
+  position: absolute;
+  top: 100vh;
+  /*margin-top: -40px;*/
+  left: 0;
   width: 100%;
   padding: 0;
 }
@@ -73,6 +75,7 @@ video#embedded_video {
 }
 
 #features {
+
   position: relative; 
   width: 100vw;
   height: 100vh;
@@ -101,6 +104,12 @@ video#embedded_video {
   top: 40px;
   position: absolute;
 
+
+}
+
+#search {
+
+  
 
 }
 

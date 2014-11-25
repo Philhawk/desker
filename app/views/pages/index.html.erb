@@ -8,7 +8,7 @@
 <body>
 
 	<div id="sticky_header">
-		<img src="/assets/desker_logo_white.svg" alt="" id="desker_logo">
+		<a href="/"><img src="/assets/desker_logo_white.svg" alt="" id="desker_logo"></a>
 		<img id="hamburger_menu" src="/assets/hamburger_placeholder.svg" alt="">
 	</div>
 
@@ -17,10 +17,23 @@
 	    	<source src="https://s3-ap-southeast-2.amazonaws.com/desker/desker_index_video.mp4" type="video/mp4">
 	   	</video>
 	   	<h1 id="take_your_seat">TAKE YOUR SEAT</h1>
+	   	 <div class="search">
+	   	 <%= form_tag search_desks_path, method: :get, class: "navbar-form navbar-left" do %>
+            <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Find your desk" %>
+        <% end %>
+        </div>
       <img id="double_down_arrow" src="/assets/double_down_arrow.png" alt="">
 	  </div>
 		
 	  <div id="features"></div>
 
+<<<<<<< HEAD
+=======
+	
+	  <div id="features">
+	  	
+	  </div>
+	
+>>>>>>> e605e3a65dad6813e89aaa6088c2b96d523fedcc
 </body>
 </html>
