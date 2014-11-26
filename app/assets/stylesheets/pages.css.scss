@@ -73,7 +73,7 @@ video#embedded_video {
   margin-top: 5%;
 }
 
-#double_down_arrow {
+.double_down_arrow {
   position: relative;
   margin-left: 45%;
   margin-right: 55%;
@@ -81,24 +81,29 @@ video#embedded_video {
 }
 
 .feature_container1 {
-  background-image: url("/assets/desker_map_feature.jpg");
+  background-image: url("/assets/find_a_space.jpg");
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   background-position: center;
   background-size: cover;
-  padding: 300px;
+  padding: 250px;
+}
+
+.feature_container1 h2, .feature_container2 h2 {
+  font-size: 45px;
 }
 
 .feature_container2 {
-  background-image: url("/assets/desker_empty_desk_no_border.jpg");
+  /*background-image: url("/assets/desker_empty_desk_no_border.jpg");*/
+  background-image: url("/assets/empty_desks.jpg");
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   background-position: center;
   background-size: cover;
   margin: 0;
-  padding: 300px;
+  padding: 250px;
 }
 
 .feature_container1 h2, .feature_container1 h3, .feature_container2 h2, .feature_container2 h3, #features h2 {
@@ -111,10 +116,16 @@ video#embedded_video {
   position: relative;
   text-align: center; 
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-color: #D59B8F;
   background-size: cover;
-  padding: 20px;
+  padding: 15px;
+  margin-bottom: 0px;
+}
+
+#features h2 {
+  margin: 30px;
+  font-size: 45px;
 }
 
 #nav-logo {
@@ -124,7 +135,7 @@ video#embedded_video {
 }
 #feature_city_images {
   display: inline-block;
-  margin: 20px;
+  margin: 12px;
 }
 
 #feature_city_images:hover {
@@ -136,4 +147,24 @@ video#embedded_video {
   text-align: center; 
   width: 100vw;
   height: 100vh;
+}
+
+#footer{
+  bottom: 0px;
+  max-width: 100%;
+  max-height: 50px;
+  width: 100%;
+  min-height: 20vh;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  z-index: 1;
+  background-color: black;
+  margin-top: 0px;
+}
+
+#footer h3 {
+  text-align: center;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  padding: 50px;
 }

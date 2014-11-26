@@ -18,6 +18,7 @@ $( document ).ready(function() {
           // console.log('marker.position: ', marker.position);
 
 
+
           google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
               console.log(locations[i])
@@ -27,12 +28,6 @@ $( document ).ready(function() {
             }
           })(marker, i));
 
-//           google.maps.event.addListener(marker, 'click', (function(marker, i) {
-//             return function() {
-//               infowindow.setContent(locations[i].address);
-//               infowindow.open(map, marker);
-//             }
-//           })(marker, i));
 
 
 //           // console.log('locations: ', locations[i]);

@@ -20,6 +20,13 @@ pre {
 
 
 
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+}
+
 div {
   &.field, &.actions {
     margin-bottom: 10px;
