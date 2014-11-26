@@ -9,7 +9,8 @@ class DesksController < ApplicationController
   def search
       if params[:search].present?
         @desks = Desk.search(params[:search])
-        @locations = Desk.near(params[:search], 2).to_json
+        @locations = Desk.near(params[:search], 2)
+        @listings = @locations.to_json(:only => [:id, :title, :description, :address, :price, :latitude, :longitude], :methods => [:thumbnail_ur])
       else
         @desks = Desk.all
       end

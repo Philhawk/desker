@@ -17,13 +17,24 @@ $( document ).ready(function() {
 
           // console.log('marker.position: ', marker.position);
 
+
           google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
-              infowindow.setContent(locations[i].address);
+              console.log(locations[i].description)
+              infowindow.setContent((locations[i].title).bold() + "<br /> " + locations[i].thumbnail + "<br /> "+locations[i].description);
+              
               infowindow.open(map, marker);
             }
           })(marker, i));
 
-          // console.log('locations: ', locations[i]);
+//           google.maps.event.addListener(marker, 'click', (function(marker, i) {
+//             return function() {
+//               infowindow.setContent(locations[i].address);
+//               infowindow.open(map, marker);
+//             }
+//           })(marker, i));
+
+
+//           // console.log('locations: ', locations[i]);
     }
 })

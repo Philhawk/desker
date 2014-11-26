@@ -9,6 +9,10 @@ body {
   margin: 0px;
 }
 
+.btn .btn-default {
+  z-index: 1000;
+}
+
 #sticky_header {
   position: fixed;
   top: 0px;
@@ -18,7 +22,7 @@ body {
   min-height: 20vh;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
-  z-index: 10000;
+  z-index: 1;
 }
 
 #desker_logo {
@@ -37,6 +41,8 @@ body {
 /*  height: 55vh;*/
   padding-top: 300px;
   height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
   /*padding-top: 45vh;*/
 }
 
@@ -46,6 +52,7 @@ video#embedded_video {
   width: auto; height: auto; z-index: -100;
   background: url(photo-3.jpg) no-repeat;
   background-size: cover;
+
 }
 
 #take_your_seat {
@@ -73,8 +80,31 @@ video#embedded_video {
   top: 45px;
 }
 
-.feature_container {
-  
+.feature_container1 {
+  background-image: url("/assets/desker_map_feature.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  padding: 300px;
+}
+
+.feature_container2 {
+  background-image: url("/assets/desker_empty_desk_no_border.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 300px;
+}
+
+.feature_container1 h2, .feature_container1 h3, .feature_container2 h2, .feature_container2 h3, #features h2 {
+  text-align: center;
+  color: white;
+  font-family: 'Roboto Slab', serif;
 }
 
 #features {
@@ -83,6 +113,7 @@ video#embedded_video {
   width: 100vw;
   height: 100vh;
   background-color: #D59B8F;
+  background-size: cover;
   padding: 20px;
 }
 
@@ -91,4 +122,9 @@ video#embedded_video {
   margin: 20px;
 }
 
-
+#empty_desk_feature {
+  position: relative;
+  text-align: center; 
+  width: 100vw;
+  height: 100vh;
+}
