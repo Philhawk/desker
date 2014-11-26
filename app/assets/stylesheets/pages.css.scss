@@ -10,6 +10,10 @@ body {
   margin: 0px;
 }
 
+.btn .btn-default {
+  z-index: 1000;
+}
+
 #sticky_header {
   position: fixed;
   top: 0px;
@@ -19,7 +23,7 @@ body {
   min-height: 20vh;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
-  z-index: 10000;
+  z-index: 1;
 }
 
 #video_container {
