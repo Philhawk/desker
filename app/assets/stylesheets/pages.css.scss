@@ -4,7 +4,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700);
 
-/** Index Page **/
 
 body {
   margin: 0px;
@@ -22,6 +21,18 @@ body {
   z-index: 10000;
 }
 
+#desker_logo {
+  height: 20vh;
+  margin: 10px;
+}
+
+#hamburger_menu {
+  height: 5vh;
+  right: 48px;
+  top: 40px;
+  position: absolute;
+}
+
 #video_container {
 /*  height: 55vh;*/
   padding-top: 300px;
@@ -30,7 +41,7 @@ body {
 }
 
 video#embedded_video {
-  position: fixed; right: 0; bottom: 0;
+  position: fixed; left: 0; top: 0;
   min-width: 100%; min-height: 100%;
   width: auto; height: auto; z-index: -100;
   background: url(photo-3.jpg) no-repeat;
@@ -62,8 +73,11 @@ video#embedded_video {
   top: 45px;
 }
 
-#features {
+.feature_container {
+  
+}
 
+#features {
   position: relative;
   text-align: center; 
   width: 100vw;
@@ -72,49 +86,9 @@ video#embedded_video {
   padding: 20px;
 }
 
-#about_desker {
-  position: relative;
-  text-align: center; 
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  padding: 20px;
-}
-
-
-#black_triangle {
-  width: 0;
-  height: 0;
-  border-left: 50vw solid transparent;
-  border-right: 50vw solid transparent;
-  border-top: 10vw solid black;
-  position: relative;
-  top: 288px;
-  z-index: 1000;
-}
-
-#desker_logo {
-  height: 20vh;
-  margin: 10px;
-}
-
-#hamburger_menu {
-  height: 5vh;
-  right: 48px;
-  top: 40px;
-  position: absolute;
-}
-
-#feature_images {
+#feature_city_images {
   display: inline-block;
   margin: 20px;
-
-}
-
-#search {
-
-  
-
 }
 
 
