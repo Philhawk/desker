@@ -8,8 +8,10 @@
       
     </div>
 </div>
+
+<div class="listings">
    <% for desk in @desks %>
-    <div class="col-md-3">
+    <div class="col-md-6">
       <div class="thumbnail">
         <%= image_tag desk.thumbnail.url %> 
          <div class="caption">
@@ -24,4 +26,5 @@
      </div>     
   </div>
     <% end %>
+  </div>
 </div>
