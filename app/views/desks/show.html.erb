@@ -26,9 +26,40 @@
       <h2><div class="star-rating" data-score= <%= @avg_rating %> ></div> </h2>
       <p><%= "#{@reviews.length} reviews" %></p>
       <h3><%= @desk.description %></h3>
-      <p>$<%= @desk.price %>/week $<%= (@desk.price)/7 %>/day  </p>
       <p><%= @desk.address %></p>
+      
+      <div class="container">
+      <div class="col-sm-6" style="height:75px;">
+        <p>$<%= @desk.price %>/week $<%= (@desk.price)/7 %>/day </p>
+          <div class='col-md-5'>
+            <div class="form-group">
+              <div class='input-group date' id='datetimepicker9'>
+                  <input type='text' class="form-control" />
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+            </div>
+          </div>
+          <div class='col-md-5'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker10'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+          </div>
+          <div class="btn btn-primary">
+            <p>Payment</p>
+          </div>
+
+      </div>
+      </div>
+     
   </div>
+      
+
+ 
     <div class="col-md-6">
          <% if @reviews.blank? %>
              <h2>No reviews yet. Be the first to write one!</h2>

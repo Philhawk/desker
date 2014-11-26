@@ -1,3 +1,4 @@
+<% @desk = @desk || Desk.new %>
 <%= form_for(@desk, :html => { :multipart => true }) do |f| %>
   <% if @desk.errors.any? %>
     <div id="error_explanation">

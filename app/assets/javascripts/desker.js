@@ -47,7 +47,21 @@ $(document).ready(function() {
       });
     }
 
+
+    $('#datetimepicker9').datetimepicker();
+    $('#datetimepicker10').datetimepicker();
+    $("#datetimepicker9").on("dp.change",function (e) {
+       $('#datetimepicker10').data("DateTimePicker").setMinDate(e.date);
+    });
+    $("#datetimepicker10").on("dp.change",function (e) {
+       $('#datetimepicker9').data("DateTimePicker").setMaxDate(e.date);
+    });    
   });
+
+   
+
+   
+    
 
 
 });
