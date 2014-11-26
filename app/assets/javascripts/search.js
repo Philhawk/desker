@@ -20,8 +20,8 @@ $( document ).ready(function() {
 
           google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
-              console.log(locations[i].description)
-              infowindow.setContent((locations[i].title).bold() + "<br /> " + locations[i].thumbnail + "<br /> "+locations[i].description);
+              console.log(locations[i])
+              infowindow.setContent((locations[i].title).bold() + "<br /> " + "<br /> "+locations[i].description);
               
               infowindow.open(map, marker);
             }
