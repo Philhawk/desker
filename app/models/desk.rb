@@ -38,6 +38,7 @@ class Desk < ActiveRecord::Base
    		validates_attachment_content_type :thumbnail, :content_type => /\Aimage\/.*\Z/
 
 
- 
-
+	 # def thumbnail
+  #        @desk.thumbnail.url(:medium)
+  #   end
 end

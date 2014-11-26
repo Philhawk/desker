@@ -1,14 +1,15 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArsl-XQJAItpNqLaPfi2TRzPFiPMik75U"
   type="text/javascript"></script>
-<script> var locations = <%== @locations %></script>
+<script> var locations = <%== @listings %></script>
   <div class="row">
     <div id="map_wrapper">
+      
     <div id="map">
       
     </div>
 </div>
    <% for desk in @desks %>
-    <div class="col-md-6">
+    <div class="col-md-3">
       <div class="thumbnail">
         <%= image_tag desk.thumbnail.url %> 
          <div class="caption">

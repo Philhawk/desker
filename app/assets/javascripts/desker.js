@@ -64,4 +64,9 @@ $(document).ready(function() {
     
 
 
+  $(".double_down_arrow").on('click',function(){
+    $("body").animate({ scrollTop: "+=" + $(window).height() }, 500);
+  });
+
+
 });

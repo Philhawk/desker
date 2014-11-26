@@ -5,8 +5,10 @@
 	<title>Desker</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+<body>
+	
+	<!-- STICKY HEADER  -->
 	<div id="sticky_header">
 		<a href="/"><img src="/assets/desker_logo_white.svg" alt="" id="desker_logo"></a>
     <!-- Pop-up Modal for User Sign up/Login -->
@@ -42,38 +44,60 @@
         
       </div>
     </div>
-  </div>
+  </div>		
+	<!-- CLOSE STICKY HEADER -->
+
 	
-		<div id="video_container">
-			<video autoplay loop poster="photo-3.jpg" id="embedded_video">
-	    	<source src="https://s3-ap-southeast-2.amazonaws.com/desker/desker_index_video.mp4" type="video/mp4">
-	   	</video>
+	<!-- VIDEO CONTAINER -->
+	<div id="video_container">
+		   <video autoplay loop poster="photo-3.jpg" id="embedded_video">
+	  	 <source src="https://s3-ap-southeast-2.amazonaws.com/desker/desker_index_video.mp4" type="video/mp4">
+	  	 </video>
+	     <h1 data-sr="enter bottom and scale up 20% over 3s" data-sr='reset' id="take_your_seat">TAKE YOUR SEAT</h1>
+	   <div class="search">
+		   	<%= form_tag search_desks_path, method: :get do %>
+	      <%= text_field_tag :search, params[:search], id: "index_search", placeholder: "Where do you want to go?" %>
+	      <% end %>
+     </div>
+  		  <img data-sr="enter bottom and scale up 20% over 7s" class="double_down_arrow" src="/assets/double_down_arrow.png" alt="">
+	</div>
+	<!-- CLOSE VIDEO CONTAINER -->
 
-	   	<h1 id="take_your_seat">TAKE YOUR SEAT</h1>
 
-	   	 <div class="search">
-	   	 <%= form_tag search_desks_path, method: :get do %>
-            <%= text_field_tag :search, params[:search], id: "index_search", placeholder: "Where do you want to go?" %>
-        <% end %>
-        </div>
-
-      <img id="double_down_arrow" src="/assets/double_down_arrow.png" alt="">
-	  </div>
+  <!-- FEATURE CONTAINER 1 -->
+  <div class="feature_container1">
+			<h2 data-sr="enter bottom and scale up 20% over 2s" data-sr='reset'>FIND A SPACE</h3>
+			<h3 data-sr="enter bottom and scale up 20% over 3s" data-sr='reset'>Everyone needs that particular spot that helps them create and innovate</h4>
+			<img class="double_down_arrow" src="/assets/double_down_arrow.png" alt="">
+	</div>
+	<!-- CLOSE FEATURE CONTAINER 2 -->
 
 
-		<div id="about_desker">
-			<h3>Find a space</h3>
-			<h4>Everyone needs that particular spot that helps them create and innovate</h4>
-			<h3>List a space</h3>
-			<h4>Put that empty desk at the corner of the office to good use</h4>
-		</div>
-		
-	  <div id="features">
-	  	<a href="/search?utf8=✓&search=perth"><img id="feature_images" src="/assets/desker_feature_perth.jpg" alt=""></a>
-	  	<a href="/search?utf8=✓&search=brisbane"><img id="feature_images" src="/assets/desker_feature_brisbane.jpg" alt=""></a>
-	  	<a href="/search?utf8=✓&search=sydney"><img id="feature_images" src="/assets/desker_feature_sydney.jpg" alt=""></a>
-	  	<a href="/search?utf8=✓&search=melbourne"><img id="feature_images" src="/assets/desker_feature_melbourne.jpg" alt=""></a>
-	  </div>
+	<!-- FEATURE CONTAINER 2 -->	
+	<div class="feature_container2">
+		<h2 data-sr="enter bottom and scale up 20% over 2s" data-sr='reset'>LIST A SPACE</h3>
+		<h3 data-sr="enter bottom and scale up 20% over 3s" data-sr='reset'>Put that empty desk at the corner of the office to good use</h4>
+		<img class="double_down_arrow" src="/assets/double_down_arrow.png" alt="">
+	</div>
+	<!-- CLOSE FEATURE CONTAINER 2 -->
+
+
+	<!-- CITY FEATURES -->
+	<div id="features">
+			<h2 data-sr="enter bottom and scale up 20% over 2s">Explore places near you</h2>
+	  	<a data-sr="enter bottom and scale up 20% over 3s" href="/search?utf8=✓&search=perth"><img id="feature_city_images" src="/assets/desker_feature_perth.jpg" alt=""></a>
+	  	<a data-sr="enter bottom and scale up 20% over 3s" href="/search?utf8=✓&search=brisbane"><img id="feature_city_images" src="/assets/desker_feature_brisbane.jpg" alt=""></a>
+	  	<a data-sr="enter bottom and scale up 20% over 3s" href="/search?utf8=✓&search=sydney"><img id="feature_city_images" src="/assets/desker_feature_sydney.jpg" alt=""></a>
+	  	<a data-sr="enter bottom and scale up 20% over 3s" href="/search?utf8=✓&search=melbourne"><img id="feature_city_images" src="/assets/desker_feature_melbourne.jpg" alt=""></a>
+  </div>
+	<!-- CLOSE CITY FEATURES -->
+
+<script src='/js/scrollReveal.min.js'></script>
+    <script>
+
+      window.sr = new scrollReveal();
+
+    </script>
 
 </body>
 </html>
