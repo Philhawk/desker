@@ -22,9 +22,28 @@ a #profile-image .dropdown-toggle  {
   max-width: 585px;
   padding: 10px;
   margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.2);
 
 }
 
+.input-group-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.input-group-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
 
 /*Phil*/
 
