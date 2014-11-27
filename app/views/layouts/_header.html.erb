@@ -13,10 +13,32 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+     <!--  <ul class="nav navbar-nav">
         <li class="active"><a href="/pages/about">About <span class="sr-only">(current)</span></a></li>
         <li><a href="/pages/contact">Contact</a></li>
-      </ul>
+      </ul> -->
+
+
+      <!-- Button trigger modal -->
+<label type="button" class="nav navbar-nav" data-toggle="modal" data-target="#myModal">
+  <%= link_to 'New Desk', new_desk_path, class: "btn btn-link" %>
+</label>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">List Your Space</h4>
+      </div>
+      <div class="modal-body">
+        <%= render 'desks/form' %>
+      </div>
+
+    </div>
+  </div>
+</div>
         <%= form_tag search_desks_path, method: :get, class: "navbar-form navbar-left" do %>
             <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Find your desk" %>
         <% end %>
