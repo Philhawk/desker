@@ -31,10 +31,10 @@ class Desk < ActiveRecord::Base
     validates :price, :presence => true
 	after_validation :geocode
 
-		has_attached_file :thumbnail, :styles => { :large => "400x>", :medium => "200x>", :thumb => "100x100>" }, :default_url => "default.jpg"
-  					  # :storage => :dropbox,
-    				 #  :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
-    				 # :path => ":style/:id_:filename"
+		has_attached_file :thumbnail, :styles => { :large => "400x>", :medium => "200x>", :thumb => "100x100>" }, :default_url => "default.jpg",
+  					  :storage => :dropbox,
+    				  :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+    				 :path => ":style/:id_:filename"
    		validates_attachment_content_type :thumbnail, :content_type => /\Aimage\/.*\Z/
 
 
