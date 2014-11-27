@@ -61,10 +61,15 @@ a #profile-image .dropdown-toggle  {
 
 .navbar {
 	max-height: 60px;
+	margin: 0px;
 }
 
 .listings{
 	width: 50vw;
 	height: 100vh;
 	overflow: scroll;
+}
+
+.show {
+  overflow: scroll;
 }
