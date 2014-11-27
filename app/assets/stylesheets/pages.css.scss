@@ -35,6 +35,21 @@ body {
   right: 48px;
   top: 40px;
   position: absolute;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  overflow:hidden;
+}
+
+#hamburger_menu:hover {
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
 }
 
 #video_container {
@@ -81,7 +96,7 @@ video#embedded_video {
 }
 
 .feature_container1 {
-  background-image: url("/assets/desker_map_feature.jpg");
+  background-image: url("/assets/find_a_space.jpg");
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
@@ -90,8 +105,13 @@ video#embedded_video {
   padding: 250px;
 }
 
+.feature_container1 h2, .feature_container2 h2 {
+  font-size: 45px;
+}
+
 .feature_container2 {
-  background-image: url("/assets/desker_empty_desk_no_border.jpg");
+  /*background-image: url("/assets/desker_empty_desk_no_border.jpg");*/
+  background-image: url("/assets/empty_desks.jpg");
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
@@ -111,15 +131,37 @@ video#embedded_video {
   position: relative;
   text-align: center; 
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-color: #D59B8F;
   background-size: cover;
-  padding: 20px;
+  padding: 15px;
+  margin-bottom: 0px;
 }
 
+#features_four {
+  top: -10px;
+}
+
+#features h2 {
+  margin: 30px;
+  font-size: 45px;
+}
+
+#nav-logo {
+  position: relative;
+  left: -18px;
+  top: -10px;
+}
 #feature_city_images {
   display: inline-block;
-  margin: 20px;
+  margin: 12px;
+}
+
+#feature_city_images:hover {
+  opacity: 0.7;
+  -webkit-box-shadow: 0px 0px 11px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 11px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px 2px rgba(0,0,0,0.75);
 }
 
 #empty_desk_feature {
@@ -127,4 +169,24 @@ video#embedded_video {
   text-align: center; 
   width: 100vw;
   height: 100vh;
+}
+
+#footer{
+  bottom: 0px;
+  max-width: 100%;
+  max-height: 50px;
+  width: 100%;
+  min-height: 20vh;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  z-index: 1;
+  background-color: black;
+  margin-top: 0px;
+}
+
+#footer h3 {
+  text-align: center;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  padding: 50px;
 }
