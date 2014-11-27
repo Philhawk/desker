@@ -3,9 +3,7 @@ module ApplicationHelper
   def intellinav
     nav = ''
     if @current_user.present?
-      nav += "<li class=\"navbar-text\"> Welcome #{ @current_user.name } </li>"
-      nav += "<li class=\"divider\">"
-      nav += "</li>"
+     
       nav += "<li>" + link_to('Edit Profile', edit_user_path(@current_user)) + "</li> "
       nav += "<li>" + link_to('My Listing', mylistings_path(@current_user)) + "</li> "
       nav += "<li>" + link_to('Sign out', login_path, :method => :delete, :data => {:confirm => 'Are you sure?'}) + "</li>"

@@ -1,3 +1,4 @@
+
 <% @user = @user || User.new %>
 <%= form_for(@user, :html => { :multipart => true }) do |f| %>
   <% if @user.errors.any? %>
