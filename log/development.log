@@ -1,0 +1,1982 @@
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (89.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDesks (20141121005100)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (33.0ms)[0m  [1mCREATE TABLE "desks" ("id" serial primary key, "title" character varying(255), "description" character varying(255), "address" text, "latitude" float, "longitude" float, "price" integer, "desk_type" character varying(255), "thumbnail" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141121005100"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateVenues (20141121005533)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (31.8ms)[0m  [1mCREATE TABLE "venues" ("id" serial primary key, "name" character varying(255), "features" text, "contact" text, "no_desks" integer, "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (3.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141121005533"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUsers (20141121005757)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (8.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "role" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (6.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141121005757"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentThumbnailToDesks (20141121021603)
+  [1m[35m (2.0ms)[0m  BEGIN
+  [1m[36m (84.8ms)[0m  [1mALTER TABLE "desks" ADD COLUMN "thumbnail_file_name" character varying(255)[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "desks" ADD COLUMN "thumbnail_content_type" character varying(255)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "desks" ADD COLUMN "thumbnail_file_size" integer[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "desks" ADD COLUMN "thumbnail_updated_at" timestamp
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141121021603"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Migrating to AddAttachmentAvatarToUsers (20141123013025)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD COLUMN "avatar_file_name" character varying(255)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "avatar_content_type" character varying(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD COLUMN "avatar_file_size" integer
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "avatar_updated_at" timestamp[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141123013025"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToDesks (20141123044717)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "desks" ADD COLUMN "user_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141123044717"]]
+  [1m[36m (6.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateReviews (20141124004344)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (26.0ms)[0m  [1mCREATE TABLE "reviews" ("id" serial primary key, "rating" integer, "comment" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124004344"]]
+  [1m[36m (64.1ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToReviews (20141124005543)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "reviews" ADD COLUMN "user_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124005543"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddDeskIdToReviews (20141124054209)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "reviews" ADD COLUMN "desk_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124054209"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (14.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDesk Load (1.2ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1l8ngws.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic163.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic163.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic163.jpg[0]' -auto-orient -resize "200" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic16320141127-804-1b47pd7'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic16320141127-804-1b47pd7'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic163.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic163.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic163.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic16320141127-804-5bopju'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1mic16320141127-804-5bopju'
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/18c5e3a6e5e6fe5cc426f29446c1a09720141127-804-1bomvcg.jpg'
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "users" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "created_at", "email", "name", "password_digest", "role", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["avatar_content_type", "image/jpeg"], ["avatar_file_name", "Groucho_Marx_-_portrait.jpg"], ["avatar_file_size", 440455], ["avatar_updated_at", "2014-11-27 04:34:55.953993"], ["created_at", "2014-11-27 04:34:56.963683"], ["email", "groucho@gmail.com"], ["name", "Groucho"], ["password_digest", "$2a$10$QquN4vDGRjLMnZSRHyeSzuGQdmzlYB9.kU8YDX27nz79.53FlOzbu"], ["role", "user"], ["updated_at", "2014-11-27 04:34:56.963683"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl[0]' -auto-orient -resize "200" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl20141127-804-1ivm4xv'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl20141127-804-1ivm4xv'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl[0]' -auto-orient -resize "100x100>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl20141127-804-18mhhls'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-3njyxl20141127-804-18mhhls'
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "users" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "created_at", "email", "name", "password_digest", "role", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["avatar_content_type", "image/jpeg"], ["avatar_file_name", "images"], ["avatar_file_size", 5819], ["avatar_updated_at", "2014-11-27 04:35:06.490697"], ["created_at", "2014-11-27 04:35:06.819217"], ["email", "harpo@gmail.com"], ["name", "Harpo"], ["password_digest", "$2a$10$/jX6FRvmsDZqnGnUfm7pfeBZGTmzQnVW89EX4X/medHaTvKClwWXG"], ["role", "user"], ["updated_at", "2014-11-27 04:35:06.819217"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz48[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz48[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz48[0]' -auto-orient -resize "200" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz4820141127-804-1ekwavr'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz4820141127-804-1ekwavr'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz48[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz48[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz48[0]' -auto-orient -resize "100x100>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz4820141127-804-10gos6d'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/59b514174bffe4ae402b3d63aad79fe020141127-804-t4zz4820141127-804-10gos6d'
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "created_at", "email", "name", "password_digest", "role", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["avatar_content_type", "image/jpeg"], ["avatar_file_name", "images"], ["avatar_file_size", 7230], ["avatar_updated_at", "2014-11-27 04:35:12.639871"], ["created_at", "2014-11-27 04:35:12.813662"], ["email", "chiko@gmail.com"], ["name", "Chiko"], ["password_digest", "$2a$10$rOAzXRV1MbWlRU8eMJrnlOjIVvARqgoJQu6nYZMoHIbJ5TkPrFUbi"], ["role", "user"], ["updated_at", "2014-11-27 04:35:12.813662"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-1q4vdue.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds.jpg[0]' -auto-orient -resize "400>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds20141127-804-1egkvzq'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds20141127-804-1egkvzq'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds.jpg[0]' -auto-orient -resize "200>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds20141127-804-1gzurhk'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds20141127-804-1gzurhk'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds20141127-804-huxx8b'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-130vsds20141127-804-huxx8b'
+  [1m[36m (1.6ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/1f36a50464c90d9acac96d927d0cf8b020141127-804-6tkluh.jpg'
+  [1m[35mSQL (30.8ms)[0m  INSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["address", "2 Holt St, Surry Hills"], ["created_at", "2014-11-27 04:35:20.253262"], ["description", "We are a highly curated community of tech-based startups and mutually supportive businesses in Sydney."], ["desk_type", "Dedicated / Fixed Desk"], ["latitude", -33.884988], ["longitude", 151.209276], ["price", 100], ["thumbnail_content_type", "image/jpeg"], ["thumbnail_file_name", "PS_LES_-_Screen_(resized).jpg"], ["thumbnail_file_size", 88471], ["thumbnail_updated_at", "2014-11-27 04:35:19.211321"], ["title", "Projective Space"], ["updated_at", "2014-11-27 04:35:20.253262"]]
+  [1m[36m (16.2ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (8303.6ms)[0m  {"id":1}
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1by3hgb.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb.jpg[0]' -auto-orient -resize "400>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb20141127-804-1sdsivc'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb20141127-804-1sdsivc'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb.jpg[0]' -auto-orient -resize "200>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb20141127-804-1nrmrnt'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb20141127-804-1nrmrnt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb20141127-804-1pgfkwk'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1ksgmxb20141127-804-1pgfkwk'
+  [1m[35m (3.1ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/616c6dbbaaa05dd6f5400ca6f9d6e1fd20141127-804-1tcmxcd.jpg'
+  [1m[36mSQL (59.3ms)[0m  [1mINSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["address", "55 York St, Sydney"], ["created_at", "2014-11-27 04:35:31.712588"], ["description", "Belsham Street Studios are a beautifully finished creative shared workspace in the heart of Hackney Central."], ["desk_type", "Fashion Hub"], ["latitude", -33.867218], ["longitude", 151.205627], ["price", 250], ["thumbnail_content_type", "image/jpeg"], ["thumbnail_file_name", "FB_1st_Flr.jpg"], ["thumbnail_file_size", 48555], ["thumbnail_updated_at", "2014-11-27 04:35:30.776249"], ["title", "Belsham Street Studios"], ["updated_at", "2014-11-27 04:35:31.712588"]]
+  [1m[35m (181.7ms)[0m  COMMIT
+  [1m[33mDesk Store (914.8ms)[0m  {"id":2}
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-dpdt80.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv.png[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv.png[0]' -auto-orient -resize "400>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv20141127-804-10rb3gy'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv20141127-804-10rb3gy'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv.png[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv.png[0]' -auto-orient -resize "200>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv20141127-804-1e5qhev'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv20141127-804-1e5qhev'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv.png[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv.png[0]' -auto-orient -resize "100x100>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv20141127-804-17a14hw'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-1u17clv20141127-804-17a14hw'
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/0f7404e3a3f7a6ece5f64b8eb4dc20d820141127-804-trjsbj.png'
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["address", "3 Glenayr St, Bondi"], ["created_at", "2014-11-27 04:35:38.531390"], ["description", "We are a friendly creative studio full of people from varying industries... photography, film, product, graphic design and 3d rendering."], ["desk_type", "Creative Desk Space / Hot Desk"], ["latitude", -33.8821686], ["longitude", 151.2756732], ["price", 300], ["thumbnail_content_type", "image/png"], ["thumbnail_file_name", "Screen_Shot_2014-11-13_at_12.47.35.png"], ["thumbnail_file_size", 235635], ["thumbnail_updated_at", "2014-11-27 04:35:37.217066"], ["title", "Crown Works"], ["updated_at", "2014-11-27 04:35:38.531390"]]
+  [1m[36m (5.5ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (338.3ms)[0m  {"id":3}
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-gtfi77.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj5271.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj5271.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj5271.jpg[0]' -auto-orient -resize "400>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj527120141127-804-1884jsw'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj527120141127-804-1884jsw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj5271.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj5271.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj5271.jpg[0]' -auto-orient -resize "200>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj527120141127-804-132f6g4'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj527120141127-804-132f6g4'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj5271.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj5271.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj5271.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj527120141127-804-y0p4ns'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1mj527120141127-804-y0p4ns'
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/226def2a7bf7d67f91c01233c0e0da6520141127-804-1e3o9qg.jpg'
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["address", "14 Old South Head Road, Vaucluse"], ["created_at", "2014-11-27 04:35:41.208536"], ["description", "Deskspace in MiLLERS JUNCTION, the creative studios attached to PRINT CLUB VAUCLUSE!"], ["desk_type", "Creative Desk Space / Hot Desk"], ["latitude", -33.864642], ["longitude", 151.278108], ["price", 220], ["thumbnail_content_type", "image/jpeg"], ["thumbnail_file_name", "galleryweb2.jpg"], ["thumbnail_file_size", 64193], ["thumbnail_updated_at", "2014-11-27 04:35:40.254519"], ["title", "Millers Junction"], ["updated_at", "2014-11-27 04:35:41.208536"]]
+  [1m[35m (53.5ms)[0m  COMMIT
+  [1m[33mDesk Store (20023.9ms)[0m  {"id":4,"exception":["Faraday::TimeoutError","Net::ReadTimeout"]}
+Net::ReadTimeout
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-1ve7bkl.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb.jpg[0]' -auto-orient -resize "400>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb20141127-804-o77wmm'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb20141127-804-o77wmm'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb.jpg[0]' -auto-orient -resize "200>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb20141127-804-1ahqjf8'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb20141127-804-1ahqjf8'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb.jpg[0]'
+Command :: convert '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb20141127-804-17wwl72'
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-f0k9lb20141127-804-17wwl72'
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/kn/t9cfq4795p70_j5gqmm06mgc0000gn/T/bb45d2c081cad4170d8cfc160287670220141127-804-29wf0n.jpg'
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "desks" ("address", "created_at", "description", "desk_type", "latitude", "longitude", "price", "thumbnail_content_type", "thumbnail_file_name", "thumbnail_file_size", "thumbnail_updated_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["address", "2 George St, Sydney"], ["created_at", "2014-11-27 04:36:03.339792"], ["description", "We support early stage businesses with awesome co-working spaces, a lively community, mentors + biz support."], ["desk_type", "Creative Desk Space / Hot Desk"], ["latitude", -33.8735643], ["longitude", 151.2069237], ["price", 200], ["thumbnail_content_type", "image/jpeg"], ["thumbnail_file_name", "578215_549587745075570_25973020_n.jpg"], ["thumbnail_file_size", 31172], ["thumbnail_updated_at", "2014-11-27 04:36:02.054489"], ["title", "Bathtub 2 Boardroom"], ["updated_at", "2014-11-27 04:36:03.339792"]]
+  [1m[36m (26.2ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (2245.1ms)[0m  {"id":5}
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (21.6ms)[0m  [1mUPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 1[0m  [["updated_at", "2014-11-27 04:36:06.790169"], ["user_id", 1]]
+  [1m[35m (56.8ms)[0m  COMMIT
+  [1m[33mDesk Store (414.7ms)[0m  {"id":1}
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 3  [["updated_at", "2014-11-27 04:36:07.592330"], ["user_id", 1]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (181.6ms)[0m  {"id":3}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 5[0m  [["updated_at", "2014-11-27 04:36:08.475165"], ["user_id", 2]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[33mDesk Store (137.9ms)[0m  {"id":5}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 4  [["updated_at", "2014-11-27 04:36:08.939856"], ["user_id", 3]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[33mDesk Store (106.6ms)[0m  {"id":4}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "desks" SET "updated_at" = $1, "user_id" = $2 WHERE "desks"."id" = 2[0m  [["updated_at", "2014-11-27 04:36:09.600359"], ["user_id", 3]]
+  [1m[35m (16.7ms)[0m  COMMIT
+  [1m[33mDesk Store (194.3ms)[0m  {"id":2}
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:36:47 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (1.3ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (288.4ms)
+  Rendered desks/_form.html.erb (105.8ms)
+  Rendered layouts/_header.html.erb (135.8ms)
+Completed 200 OK in 4346ms (Views: 4158.0ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:51 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:52 +1100
+
+
+Started GET "/assets/desker_logo_black_small.svg" for 127.0.0.1 at 2014-11-27 15:36:53 +1100
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-27 15:36:57 +1100
+Processing by SessionController#new as HTML
+  Parameters: {"authenticity_token"=>"4Nvz7dQ6agmKGje642N/zuyQJNWB8WvJd7REPrJs87w="}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered session/_form.haml (46.3ms)
+  Rendered session/new.haml within layouts/application (184.7ms)
+  Rendered desks/_form.html.erb (20.1ms)
+  Rendered layouts/_header.html.erb (50.1ms)
+Completed 200 OK in 1142ms (Views: 1011.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:58 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started GET "/assets/desker_logo_black_small.svg" for 127.0.0.1 at 2014-11-27 15:36:59 +1100
+
+
+Started POST "/login" for 127.0.0.1 at 2014-11-27 15:37:06 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Nvz7dQ6agmKGje642N/zuyQJNWB8WvJd7REPrJs87w=", "email"=>"groucho@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (42.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'groucho@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 215ms (ActiveRecord: 43.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 15:37:06 +1100
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/_form.html.erb (143.2ms)
+  Rendered session/_form.haml (1.3ms)
+  Rendered pages/index.html.erb within layouts/application (172.7ms)
+Completed 200 OK in 649ms (Views: 645.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.4ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/js/scrollReveal.min.js" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+ActionController::RoutingError (No route matches [GET] "/js/scrollReveal.min.js"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.9ms)
+
+
+Started GET "/assets/desker_logo_white.svg" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/double_down_arrow.png" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/desker_feature_brisbane.jpg" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/assets/desker_feature_perth.jpg" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+
+Started GET "/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:37:07 +1100
+
+ActionController::RoutingError (No route matches [GET] "/photo-3.jpg"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.4ms)
+
+
+Started GET "/assets/hamburger_placeholder.svg" for 127.0.0.1 at 2014-11-27 15:37:08 +1100
+
+
+Started GET "/assets/desker_feature_sydney.jpg" for 127.0.0.1 at 2014-11-27 15:37:08 +1100
+
+
+Started GET "/assets/desker_feature_melbourne.jpg" for 127.0.0.1 at 2014-11-27 15:37:08 +1100
+
+
+Started GET "/assets/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:37:08 +1100
+
+
+Started GET "/assets/find_a_space.jpg" for 127.0.0.1 at 2014-11-27 15:37:08 +1100
+
+
+Started GET "/assets/empty_desks_alt.jpg" for 127.0.0.1 at 2014-11-27 15:37:08 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/assets/desker_logo_black_small.svg" for 127.0.0.1 at 2014-11-27 15:37:15 +1100
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:37:19 +1100
+Processing by DesksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDesk Load (0.7ms)[0m  SELECT "desks".* FROM "desks"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (140.8ms)
+  Rendered desks/_form.html.erb (4.5ms)
+  Rendered layouts/_header.html.erb (1944.8ms)
+Completed 200 OK in 2613ms (Views: 2605.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started GET "/assets/desker_logo_black_small.svg" for 127.0.0.1 at 2014-11-27 15:37:22 +1100
+
+
+Started DELETE "/login" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4Nvz7dQ6agmKGje642N/zuyQJNWB8WvJd7REPrJs87w="}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/_form.html.erb (5.2ms)
+  Rendered session/_form.haml (1.5ms)
+  Rendered pages/index.html.erb within layouts/application (79.4ms)
+Completed 200 OK in 549ms (Views: 543.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:37:28 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (99.7ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (181.4ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/js/scrollReveal.min.js" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+ActionController::RoutingError (No route matches [GET] "/js/scrollReveal.min.js"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.8ms)
+
+
+Started GET "/assets/desker_logo_white.svg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/hamburger_placeholder.svg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/double_down_arrow.png" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/desker_feature_brisbane.jpg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/desker_feature_perth.jpg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/desker_feature_sydney.jpg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+ActionController::RoutingError (No route matches [GET] "/photo-3.jpg"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.2ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.5ms)
+
+
+Started GET "/assets/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/desker_feature_melbourne.jpg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/find_a_space.jpg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/assets/empty_desks_alt.jpg" for 127.0.0.1 at 2014-11-27 15:37:29 +1100
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:37:34 +1100
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (61.1ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (119.9ms)
+  Rendered desks/_form.html.erb (7.8ms)
+  Rendered layouts/_header.html.erb (22.5ms)
+Completed 200 OK in 1093ms (Views: 1024.0ms | ActiveRecord: 66.3ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:35 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started GET "/assets/desker_logo_black_small.svg" for 127.0.0.1 at 2014-11-27 15:37:36 +1100
+
+
+Started POST "/desks" for 127.0.0.1 at 2014-11-27 15:37:41 +1100
+Processing by DesksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Nvz7dQ6agmKGje642N/zuyQJNWB8WvJd7REPrJs87w=", "desk"=>{"title"=>"", "description"=>"", "price"=>"", "address"=>"", "desk_type"=>"Hot desk"}, "commit"=>"Create Desk"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 50ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/desks_controller.rb:55:in `create'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (100.0ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (206.3ms)
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:40:00 +1100
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (0.7ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (6.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (59.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 500 Internal Server Error in 569ms
+
+SyntaxError (/Users/Rusli/Desktop/desker/app/views/layouts/_header.html.erb:79: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/layouts/_header.html.erb:79: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3250769755521512738_70162993901980'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.9ms)
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:40:43 +1100
+Processing by DesksController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDesk Load (0.7ms)[0m  SELECT "desks".* FROM "desks"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (45.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 500 Internal Server Error in 551ms
+
+SyntaxError (/Users/Rusli/Desktop/desker/app/views/layouts/_header.html.erb:77: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/layouts/_header.html.erb:77: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3250769755521512738_70162993901980'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.6ms)
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:41:12 +1100
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (0.7ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (29.1ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 500 Internal Server Error in 453ms
+
+SyntaxError (/Users/Rusli/Desktop/desker/app/views/layouts/_header.html.erb:80: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/layouts/_header.html.erb:80: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3250769755521512738_70162993901980'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.4ms)
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:46:23 +1100
+Processing by DesksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDesk Load (0.8ms)[0m  SELECT "desks".* FROM "desks"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (88.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (116.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 500 Internal Server Error in 727ms
+
+SyntaxError (/Users/Rusli/Desktop/desker/app/views/layouts/_header.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/layouts/_header.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3250769755521512738_70162993901980'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.3ms)
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:48:08 +1100
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (0.9ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (48.0ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 500 Internal Server Error in 742ms
+
+SyntaxError (/Users/Rusli/Desktop/desker/app/views/layouts/_header.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/layouts/_header.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3250769755521512738_70162993901980'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (100.5ms)
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:48:23 +1100
+Processing by DesksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDesk Load (1.3ms)[0m  SELECT "desks".* FROM "desks"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (31.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 500 Internal Server Error in 510ms
+
+SyntaxError (/Users/Rusli/Desktop/desker/app/views/layouts/_header.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/layouts/_header.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3250769755521512738_70162993901980'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.6ms)
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:49:38 +1100
+Processing by DesksController#index as HTML
+  [1m[35mUser Load (26.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mDesk Load (0.7ms)[0m  [1mSELECT "desks".* FROM "desks"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (29.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 500 Internal Server Error in 701ms
+
+SyntaxError (/Users/Rusli/Desktop/desker/app/views/layouts/_header.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/layouts/_header.html.erb:69: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3250769755521512738_70162993901980'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.8ms)
+
+
+Started GET "/desks" for 127.0.0.1 at 2014-11-27 15:50:24 +1100
+Processing by DesksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDesk Load (0.7ms)[0m  SELECT "desks".* FROM "desks"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered desks/index.html.erb within layouts/application (30.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 574ms (Views: 569.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/assets/desker_logo_black_small.svg" for 127.0.0.1 at 2014-11-27 15:50:25 +1100
+
+
+Started GET "/login" for 127.0.0.1 at 2014-11-27 15:50:55 +1100
+Processing by SessionController#new as HTML
+  Parameters: {"authenticity_token"=>"4Nvz7dQ6agmKGje642N/zuyQJNWB8WvJd7REPrJs87w="}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered session/_form.haml (1.6ms)
+  Rendered session/new.haml within layouts/application (17.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 560ms (Views: 556.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/assets/desker_logo_black_small.svg" for 127.0.0.1 at 2014-11-27 15:50:56 +1100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 15:51:23 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/_form.html.erb (7.9ms)
+  Rendered session/_form.haml (1.3ms)
+  Rendered pages/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 592ms (Views: 587.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:51:23 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:51:23 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.7ms)
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/js/scrollReveal.min.js" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+ActionController::RoutingError (No route matches [GET] "/js/scrollReveal.min.js"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.4ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.8ms)
+
+
+Started GET "/assets/desker_logo_white.svg" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/desker_feature_brisbane.jpg" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/hamburger_placeholder.svg" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/desker_feature_perth.jpg" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/double_down_arrow.png" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/desker_feature_sydney.jpg" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/assets/desker_feature_melbourne.jpg" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+
+Started GET "/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:51:24 +1100
+
+ActionController::RoutingError (No route matches [GET] "/photo-3.jpg"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Rusli/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (20.8ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/Rusli/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (134.1ms)
+
+
+Started GET "/assets/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:51:25 +1100
+
+
+Started GET "/assets/find_a_space.jpg" for 127.0.0.1 at 2014-11-27 15:51:25 +1100
+
+
+Started GET "/assets/empty_desks_alt.jpg" for 127.0.0.1 at 2014-11-27 15:51:25 +1100
