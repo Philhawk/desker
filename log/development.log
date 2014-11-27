@@ -22509,3 +22509,1214 @@ Started GET "/assets/star-off.png" for 127.0.0.1 at 2014-11-27 14:24:44 +1100
 
 
 Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-27 14:24:44 +1100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 15:12:02 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/_form.html.erb (201.6ms)
+  Rendered session/_form.haml (5.3ms)
+  Rendered pages/index.html.erb within layouts/application (231.0ms)
+Completed 200 OK in 2184ms (Views: 2081.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.1ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/js/scrollReveal.min.js" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+ActionController::RoutingError (No route matches [GET] "/js/scrollReveal.min.js"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/desker_logo_white.svg" for 127.0.0.1 at 2014-11-27 15:12:06 +1100
+
+
+Started GET "/assets/desker_feature_perth.jpg" for 127.0.0.1 at 2014-11-27 15:12:07 +1100
+
+
+Started GET "/assets/hamburger_placeholder.svg" for 127.0.0.1 at 2014-11-27 15:12:07 +1100
+
+
+Started GET "/assets/double_down_arrow.png" for 127.0.0.1 at 2014-11-27 15:12:07 +1100
+
+
+Started GET "/assets/desker_feature_sydney.jpg" for 127.0.0.1 at 2014-11-27 15:12:07 +1100
+
+
+Started GET "/assets/desker_feature_brisbane.jpg" for 127.0.0.1 at 2014-11-27 15:12:07 +1100
+
+
+Started GET "/assets/desker_feature_melbourne.jpg" for 127.0.0.1 at 2014-11-27 15:12:07 +1100
+
+
+Started GET "/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:12:07 +1100
+
+ActionController::RoutingError (No route matches [GET] "/photo-3.jpg"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.4ms)
+
+
+Started GET "/assets/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:12:07 +1100
+
+
+Started GET "/assets/empty_desks_alt.jpg" for 127.0.0.1 at 2014-11-27 15:12:08 +1100
+
+
+Started GET "/assets/find_a_space.jpg" for 127.0.0.1 at 2014-11-27 15:12:08 +1100
+
+
+Started GET "/desks/search?utf8=%E2%9C%93&search=bondi" for 127.0.0.1 at 2014-11-27 15:13:00 +1100
+Processing by DesksController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"bondi"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 483ms
+
+Faraday::ConnectionFailed (Connection refused - connect(2)):
+  app/controllers/desks_controller.rb:11:in `search'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 15:14:36 +1100
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/_form.html.erb (3.8ms)
+  Rendered session/_form.haml (0.9ms)
+  Rendered pages/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 596ms (Views: 593.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:14:37 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (152.4ms)
+
+
+Started GET "/js/scrollReveal.min.js" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+ActionController::RoutingError (No route matches [GET] "/js/scrollReveal.min.js"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.5ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+
+Started GET "/js/scrollReveal.min.js" for 127.0.0.1 at 2014-11-27 15:14:38 +1100
+
+ActionController::RoutingError (No route matches [GET] "/js/scrollReveal.min.js"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/_form.html.erb (3.3ms)
+  Rendered session/_form.haml (0.8ms)
+  Rendered pages/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 284ms (Views: 281.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.9ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/js/scrollReveal.min.js" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+ActionController::RoutingError (No route matches [GET] "/js/scrollReveal.min.js"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.8ms)
+
+
+Started GET "/assets/desker_logo_white.svg" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/hamburger_placeholder.svg" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/double_down_arrow.png" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/desker_feature_perth.jpg" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/desker_feature_melbourne.jpg" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/desker_feature_brisbane.jpg" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/assets/desker_feature_sydney.jpg" for 127.0.0.1 at 2014-11-27 15:14:40 +1100
+
+
+Started GET "/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:14:41 +1100
+
+ActionController::RoutingError (No route matches [GET] "/photo-3.jpg"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.8ms)
+
+
+Started GET "/assets/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:14:41 +1100
+
+
+Started GET "/assets/find_a_space.jpg" for 127.0.0.1 at 2014-11-27 15:14:41 +1100
+
+
+Started GET "/assets/empty_desks_alt.jpg" for 127.0.0.1 at 2014-11-27 15:14:41 +1100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 15:14:42 +1100
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/_form.html.erb (4.7ms)
+  Rendered session/_form.haml (1.1ms)
+  Rendered pages/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 300ms (Views: 298.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:42 +1100
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:42 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:42 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:42 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:42 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:42 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:42 +1100
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/js/scrollReveal.min.js" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+ActionController::RoutingError (No route matches [GET] "/js/scrollReveal.min.js"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.0ms)
+
+
+Started GET "/assets/desker_logo_white.svg" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+ActionController::RoutingError (No route matches [GET] "/photo-3.jpg"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.2ms)
+
+
+Started GET "/assets/double_down_arrow.png" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/hamburger_placeholder.svg" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/desker_feature_perth.jpg" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/desker_feature_brisbane.jpg" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/desker_feature_sydney.jpg" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/desker_feature_melbourne.jpg" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/photo-3.jpg" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/find_a_space.jpg" for 127.0.0.1 at 2014-11-27 15:14:43 +1100
+
+
+Started GET "/assets/empty_desks_alt.jpg" for 127.0.0.1 at 2014-11-27 15:14:44 +1100
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:14:53 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (51.9ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.4ms)
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2014-11-27 15:16:34 +1100
+
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AndrewThompson/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AndrewThompson/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.8ms)
+
+
+Started GET "/desks/1" for 127.0.0.1 at 2014-11-27 15:26:42 +1100
+Processing by DesksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (128.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mDesk Load (27.0ms)[0m  SELECT  "desks".* FROM "desks"  WHERE "desks"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (31.2ms)[0m  [1mSELECT "reviews".* FROM "reviews"  WHERE "reviews"."desk_id" = 1  ORDER BY created_at DESC[0m
+  [1m[35mDesk Load (18.1ms)[0m  SELECT desks.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.884988 - desks.latitude) * PI() / 180 / 2), 2) + COS(-33.884988 * PI() / 180) * COS(desks.latitude * PI() / 180) * POWER(SIN((151.209276 - desks.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((desks.longitude - 151.209276) / 57.2957795), ((desks.latitude - -33.884988) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "desks"  WHERE (desks.latitude BETWEEN -34.1744515662217 AND -33.5955244337783 AND desks.longitude BETWEEN 150.86059125568082 AND 151.55796074431916 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.884988 - desks.latitude) * PI() / 180 / 2), 2) + COS(-33.884988 * PI() / 180) * COS(desks.latitude * PI() / 180) * POWER(SIN((151.209276 - desks.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 20 AND desks.id != 1)  ORDER BY distance ASC
+  Rendered desks/show.html.erb within layouts/application (1254.9ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+Completed 200 OK in 2575ms (Views: 2043.0ms | ActiveRecord: 355.7ms)
+
+
+Started GET "/assets/desks.css?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/venues.css?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/desker.css?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:46 +1100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/desker.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/desks.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/scrollReveal.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/venues.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/desker_logo_black_small.svg" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2014-11-27 15:26:47 +1100
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-27 15:26:48 +1100
