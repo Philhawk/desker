@@ -12,13 +12,17 @@
 <% unless params['action'] == 'index' && params['controller'] == 'pages' %>
 
   <%= render 'layouts/header' %>
+  <br style="clear:both">
 
 <% end %>
 
 
 
-
-		<%= yield %>
+	<div class="container">
+		<div class="row">
+			<%= yield %>
+		</div>
+	</div>
 
 
 

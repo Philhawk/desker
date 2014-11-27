@@ -7,6 +7,7 @@
 
 body {
   margin: 0px;
+  padding: 0px;
 }
 
 .btn .btn-default {
@@ -54,7 +55,7 @@ body {
 
 #video_container {
 /*  height: 55vh;*/
-  padding-top: 300px;
+  padding-top: 250px;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
@@ -77,6 +78,7 @@ video#embedded_video {
   font-size: 70px;
   letter-spacing: 0.2em;
   margin: 0;
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 #index_search {
@@ -107,11 +109,13 @@ video#embedded_video {
 
 .feature_container1 h2, .feature_container2 h2 {
   font-size: 45px;
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .feature_container2 {
   /*background-image: url("/assets/desker_empty_desk_no_border.jpg");*/
-  background-image: url("/assets/empty_desks.jpg");
+  background-image: url("/assets/empty_desks_alt.jpg");
+  /*background-image: url("/assets/empty_desks.jpg");*/
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
@@ -125,6 +129,7 @@ video#embedded_video {
   text-align: center;
   color: white;
   font-family: 'Roboto Slab', serif;
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 #features {
@@ -185,4 +190,5 @@ video#embedded_video {
   color: white;
   font-family: 'Roboto Slab', serif;
   padding: 50px;
+  margin: 0;
 }
