@@ -1,28 +1,34 @@
-== README
+#Desker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A site to find, locate and share desk space with like minded people around you
 
-Things you may want to cover:
+##Install
 
-* Ruby version
+After downloading, run
 
-* System dependencies
+bundle install
 
-* Configuration
+##Create your database
 
-* Database creation
+rake db:migrate
 
-* Database initialization
+##Load seed data
 
-* How to run the test suite
+rake db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+#Features
 
-* Deployment instructions
+Find desks in your area via geolocation
 
-* ...
+View Google Maps, Street View of potential spaces to work
+
+Review System, with desks rated on performance by users
+
+Bootstrapped
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+License
+
+Copyright © 2014 Phil Jacob, Andrew Thompson and Rusli 
+
