@@ -1,22 +1,22 @@
-#Desker
+*Desker*
 
 A site to find, locate and share desk space with like minded people around you
 
-## Install
+*Install*
 
 After downloading, run
 
 bundle install
 
-## Create your database
+*Create your database*
 
 rake db:migrate
 
-## Load seed data
+*Load seed data*
 
 rake db:seed
 
-# Features
+*Features*
 
 Find desks in your area via geolocation
 
@@ -28,7 +28,7 @@ Bootstrapped
 
 
 
-# License
+*License*
 
 Copyright © 2014 Phil Jacob, Andrew Thompson and Rusli 
 
